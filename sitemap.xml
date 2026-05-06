@@ -11,6 +11,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://urban-pulse-adventures.vercel.app/airport-transfers.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://urban-pulse-adventures.vercel.app/blog.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

@@ -1,0 +1,418 @@
+/* ===== Airport Transfers - Package Styles ===== */
+
+/* Hero Section */
+.packages-hero {
+  background: linear-gradient(135deg, rgba(139, 101, 66, 0.88) 0%, rgba(166, 124, 82, 0.85) 50%, rgba(122, 89, 56, 0.88) 100%), url('../images/image%2020.jfif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.packages-hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+  font-family: 'Playfair Display', serif;
+}
+
+.packages-hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+/* Packages Section */
+.packages {
+  padding: 4rem 2rem;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Urban Card Styles */
+.urban-card {
+  background: var(--card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.urban-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+
+.urban-card-header {
+  padding: 2rem;
+  border-bottom: 1px solid var(--border-light);
+  background: linear-gradient(135deg, var(--card) 0%, var(--card-2) 100%);
+}
+
+.urban-card-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.urban-card-header .badge {
+  font-size: 0.75rem;
+  background: var(--accent-2);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.urban-card-header p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.urban-card-body {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Experience List */
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+}
+
+.experience-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.experience-list svg {
+  flex-shrink: 0;
+  color: var(--accent-2);
+  margin-top: 2px;
+}
+
+/* Price Tag */
+.price-tag {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.price-tag .currency {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-bottom: 0.25rem;
+}
+
+.price-tag .amount {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background: var(--accent-2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: var(--card-2);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  color: white;
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  color: white;
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Note Box */
+.note-box {
+  background: linear-gradient(135deg, var(--neon) 0%, var(--neon-strong) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.note-box strong {
+  color: var(--accent);
+}
+
+/* Full Description Section */
+.full-description {
+  margin-bottom: 3rem;
+}
+
+.full-description h3 {
+  font-size: 1.75rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.full-description p {
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Includes Section */
+.includes-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.includes-box,
+.not-includes-box {
+  background: var(--card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--card-radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.includes-box h4,
+.not-includes-box h4 {
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.includes-box ul,
+.not-includes-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.includes-box li,
+.not-includes-box li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.includes-box svg,
+.not-includes-box svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--accent-2);
+}
+
+/* Service Details */
+.service-details {
+  background: linear-gradient(135deg, var(--card) 0%, var(--card-2) 100%);
+  border: 1px solid var(--border-light);
+  border-radius: var(--card-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.service-details h3 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.service-details p {
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.service-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.service-details li {
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.service-details li::before {
+  content: "▪";
+  position: absolute;
+  left: 0;
+  color: var(--accent-2);
+  font-weight: bold;
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  .packages-hero {
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.12) 0%, rgba(196, 147, 90, 0.1) 50%, rgba(184, 132, 74, 0.12) 100%), url('../images/image%2020.jfif');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .urban-card {
+    background: var(--card);
+    border-color: var(--border);
+  }
+
+  .urban-card:hover {
+    border-color: var(--accent-2);
+  }
+
+  .urban-card-header {
+    background: linear-gradient(135deg, var(--card-2) 0%, var(--card) 100%);
+    border-bottom-color: var(--border);
+  }
+
+  .urban-card-header h3 {
+    color: var(--accent);
+  }
+
+  .urban-card-header p {
+    color: var(--text-light);
+  }
+
+  .price-tag {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.2);
+  }
+
+  .note-box {
+    background: var(--neon);
+    border-color: var(--border);
+    color: var(--text);
+  }
+
+  .includes-box,
+  .not-includes-box {
+    background: var(--card-2);
+    border-color: var(--border-light);
+  }
+
+  .service-details {
+    background: linear-gradient(135deg, var(--card-2) 0%, var(--card) 100%);
+    border-color: var(--border);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .packages-hero h2 {
+    font-size: 1.75rem;
+  }
+
+  .packages-hero p {
+    font-size: 0.95rem;
+  }
+
+  .packages-grid {
+    gap: 1.5rem;
+  }
+
+  .urban-card-header {
+    padding: 1.5rem;
+  }
+
+  .urban-card-body {
+    padding: 1.5rem;
+  }
+
+  .urban-card-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .price-tag .amount {
+    font-size: 1.5rem;
+  }
+
+  .includes-section {
+    grid-template-columns: 1fr;
+  }
+
+  .service-details {
+    padding: 1.5rem;
+  }
+}
