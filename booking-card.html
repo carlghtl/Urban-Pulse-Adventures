@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Card</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/booking-card.css">
+</head>
+<body>
+    <div class="container booking-card-container">
+        <h1>Book Your Adventure</h1>
+        <div class="booking-card">
+            <img src="assets/images/logo-f27f0ed5-a889-4451-a441-36480b619f91.jfif" alt="UrbanPulse Adventures Logo" class="booking-card-logo">
+            <form class="booking-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="package">Select Package</label>
+                <select id="package" name="package" required>
+                    <option value="">--Choose a package--</option>
+                    <option value="wildlife">Wildlife Tour</option>
+                    <option value="nightlife">Nightlife Experience</option>
+                    <option value="lens">Lens & Legend</option>
+                    <option value="seasoned">Seasoned Tours</option>
+                    <option value="kibera">Kibera Experience</option>
+                </select>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

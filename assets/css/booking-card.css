@@ -1,0 +1,53 @@
+/* Booking Card Styles */
+.booking-card-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.booking-card {
+    padding: 24px 16px;
+    background: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.booking-card-logo {
+    width: 80px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+}
+.booking-form label {
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-align: left;
+}
+.booking-form input,
+.booking-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.booking-form button {
+    background: #1e88e5;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.booking-form button:hover {
+    background: #1565c0;
+}

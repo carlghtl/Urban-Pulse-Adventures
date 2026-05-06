@@ -1,0 +1,181 @@
+/* ===== Seasoned Tours Page Specific Styles ===== */
+
+.seasonal-hero {
+  background: linear-gradient(135deg, rgba(139,101,66,0.85) 0%, rgba(196,147,90,0.75) 50%, rgba(139,101,66,0.85) 100%), url('../images/image%2027.jfif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Event Cards */
+.event-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg), 0 0 30px var(--neon);
+  border-color: var(--accent);
+}
+.event-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+.badge-valentines { background: linear-gradient(135deg, #e91e63, #c2185b); color: #fff; }
+.badge-worldcup { background: linear-gradient(135deg, #2196f3, #1565c0); color: #fff; }
+.badge-stargazing { background: linear-gradient(135deg, #673ab7, #512da8); color: #fff; }
+.badge-christmas { background: linear-gradient(135deg, #4caf50, #2e7d32); color: #fff; }
+.badge-easter { background: linear-gradient(135deg, #ff9800, #f57c00); color: #fff; }
+.badge-newyear { background: linear-gradient(135deg, #9c27b0, #7b1fa2); color: #fff; }
+.badge-summer { background: linear-gradient(135deg, #ff5722, #e64a19); color: #fff; }
+.badge-autumn { background: linear-gradient(135deg, #795548, #5d4037); color: #fff; }
+.event-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.event-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, var(--card), transparent);
+}
+.event-content { padding: 1.5rem; }
+.event-content h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+.event-content .event-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-2);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.event-content .event-desc {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.event-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.event-feature {
+  padding: 0.3rem 0.6rem;
+  background: var(--glass);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  border: 1px solid var(--border-light);
+}
+
+/* Calendar */
+.calendar-section {
+  background: var(--surface);
+  border-radius: var(--card-radius);
+  padding: 2rem;
+  border: 1px solid var(--border);
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.calendar-month {
+  text-align: center;
+  padding: 1rem;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+.calendar-month:hover {
+  border-color: var(--accent);
+  transform: scale(1.02);
+}
+.calendar-month h4 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.calendar-month .events-count {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* Highlight Section */
+.highlight-section {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  border-radius: var(--card-radius);
+  padding: 2.5rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.highlight-section h3 { color: #fff; margin-bottom: 1rem; }
+.highlight-section p { color: rgba(255,255,255,0.9); line-height: 1.7; }
+
+/* Testimonials */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.testimonial-card {
+  background: var(--card);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+}
+.testimonial-card .quote {
+  font-style: italic;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.testimonial-card .author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.testimonial-card .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+}
+.testimonial-card .name { font-weight: 600; color: var(--accent); }
+.testimonial-card .event-type { font-size: 0.85rem; color: var(--text-light); }
+
+@media(max-width: 768px) {
+  .calendar-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
