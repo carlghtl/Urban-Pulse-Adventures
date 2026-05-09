@@ -2,7 +2,7 @@
 
 /* Hero Section */
 .packages-hero {
-  background: linear-gradient(135deg, rgba(139,101,66,0.9) 0%, rgba(166,124,82,0.82) 55%, rgba(121,84,57,0.9) 100%), url('../images/image%2020.jfif');
+  background: linear-gradient(135deg, rgba(139,101,66,0.9) 0%, rgba(166,124,82,0.82) 55%, rgba(121,84,57,0.9) 100%), url('../../files/urban 2.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
