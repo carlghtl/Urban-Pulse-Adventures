@@ -1,0 +1,835 @@
+{
+  "contact": {
+    "whatsapp": "+254724355530",
+    "telegram": "@urbanpulseadventures"
+  },
+  "tours": [
+    {
+      "id": "kibera",
+      "name": "Kibera Street Vibes",
+      "shortDesc": "Explore Nairobi's vibrant community and street culture",
+      "fullDesc": "Experience the authentic heartbeat of Nairobi through the eyes of local guides. Walk through Kibera's colorful streets, meet community leaders, and discover how local initiatives are transforming neighborhoods. This immersive tour celebrates resilience, creativity, and the vibrant street culture that defines urban Nairobi.",
+      "image": "assets/images/image%208.jfif",
+      "basePrice": 5500,
+      "currency": "KES",
+      "duration": "3 hours",
+      "groupSize": "2-10 people",
+      "guides": [
+        {"name": "Samuel Kipchoge", "rating": 4.9, "reviews": 145},
+        {"name": "Grace Mwangi", "rating": 4.8, "reviews": 98}
+      ],
+      "coordinates": {
+        "lat": -1.3288,
+        "lng": 36.7833
+      },
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.792830267849!2d36.783353!3d-1.328783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f2f1234567890ab%3A0xabcdef1234567890!2sKibera%2C%20Nairobi!5e0!3m2!1sen!2sKE!4v1234567890",
+      "availability": {
+        "2026-05": {
+          "01": {"guide": "Samuel", "slots": 8},
+          "02": {"guide": "Grace", "slots": 5},
+          "03": {"guide": "Samuel", "slots": 10},
+          "04": {"guide": "Grace", "slots": 0},
+          "05": {"guide": "Samuel", "slots": 7},
+          "08": {"guide": "Grace", "slots": 6},
+          "10": {"guide": "Samuel", "slots": 9},
+          "12": {"guide": "Samuel", "slots": 4},
+          "15": {"guide": "Grace", "slots": 8},
+          "18": {"guide": "Samuel", "slots": 10},
+          "20": {"guide": "Grace", "slots": 3},
+          "22": {"guide": "Samuel", "slots": 7},
+          "25": {"guide": "Grace", "slots": 9},
+          "28": {"guide": "Samuel", "slots": 6}
+        },
+        "2026-06": {
+          "02": {"guide": "Grace", "slots": 8},
+          "05": {"guide": "Samuel", "slots": 7},
+          "08": {"guide": "Grace", "slots": 10},
+          "12": {"guide": "Samuel", "slots": 5},
+          "15": {"guide": "Grace", "slots": 9},
+          "18": {"guide": "Samuel", "slots": 8},
+          "22": {"guide": "Grace", "slots": 6},
+          "25": {"guide": "Samuel", "slots": 10}
+        }
+      },
+      "customization": {
+        "activities": [
+          {"id": "street-art", "name": "Street Art Walking Tour", "price": 0},
+          {"id": "market", "name": "Local Market Visit", "price": 0},
+          {"id": "lunch", "name": "Home Stay Lunch", "price": 1500},
+          {"id": "photo", "name": "Photography Session", "price": 2000}
+        ],
+        "durations": [
+          {"label": "2 hours", "multiplier": 0.8},
+          {"label": "3 hours (default)", "multiplier": 1.0},
+          {"label": "5 hours", "multiplier": 1.3}
+        ]
+      },
+      "reviews": [
+        {
+          "author": "James Mitchell",
+          "location": "UK",
+          "rating": 5,
+          "text": "An incredible experience! The guides were knowledgeable and passionate about their community. Kibera came alive in ways I never expected. Highly recommend!",
+          "date": "2026-04-15"
+        },
+        {
+          "author": "Sarah Kimani",
+          "location": "Kenya",
+          "rating": 5,
+          "text": "Seeing my own community through a tourist's perspective was enlightening. Samuel was an excellent guide and very professional.",
+          "date": "2026-04-10"
+        },
+        {
+          "author": "David Okonkwo",
+          "location": "Nigeria",
+          "rating": 4,
+          "text": "Great tour. The pace was good and I learned a lot about local initiatives. Would've appreciated more time in the markets though.",
+          "date": "2026-04-05"
+        },
+        {
+          "author": "Elena Rodriguez",
+          "location": "Spain",
+          "rating": 5,
+          "text": "One of the best tours I've done in Africa. Real, authentic, and respectful. Grace was wonderful and very knowledgeable.",
+          "date": "2026-03-28"
+        },
+        {
+          "author": "Ahmad Hassan",
+          "location": "UAE",
+          "rating": 5,
+          "text": "Phenomenal experience. Great insights into urban Africa. Worth every shilling!",
+          "date": "2026-03-20"
+        },
+        {
+          "author": "Aisha Patel",
+          "location": "India",
+          "rating": 4,
+          "text": "Informative and engaging. The guides really cared about sharing their story. A bit hot but that's the weather!",
+          "date": "2026-03-15"
+        },
+        {
+          "author": "Tom Bradley",
+          "location": "Australia",
+          "rating": 5,
+          "text": "Outstanding. This tour should be on everyone's Africa bucket list. Authentic, safe, and really meaningful.",
+          "date": "2026-03-10"
+        },
+        {
+          "author": "Maria Santos",
+          "location": "Brazil",
+          "rating": 4,
+          "text": "Loved the cultural immersion. Samuel's passion was contagious. Maybe a bit long for first-time visitors but totally worth it.",
+          "date": "2026-03-05"
+        },
+        {
+          "author": "Chen Wei",
+          "location": "China",
+          "rating": 5,
+          "text": "Amazing tour. Very educational about Nairobi's urban culture and community development. Guides were fantastic!",
+          "date": "2026-02-28"
+        },
+        {
+          "author": "Fatima Al-Rashid",
+          "location": "Saudi Arabia",
+          "rating": 5,
+          "text": "Exceptional experience. Grace made us feel safe and welcomed. The perspective on urban development was eye-opening.",
+          "date": "2026-02-20"
+        }
+      ],
+      "reviewStats": {
+        "averageRating": 4.7,
+        "totalReviews": 247
+      }
+    },
+    {
+      "id": "nightlife",
+      "name": "Nairobi Nightlife",
+      "shortDesc": "Discover Nairobi's after-dark culture — live music, food streets, and vibrant local scenes",
+      "fullDesc": "Experience Nairobi's electrifying nightlife! From live music venues in South C to the best food streets in Eastleigh, discover where locals go for authentic entertainment. Visit rooftop bars, underground music lounges, and hidden food gems. This is Nairobi after sunset — electric, diverse, and unforgettable.",
+      "image": "files/Night%201.jpg",
+      "basePrice": 8000,
+      "currency": "KES",
+      "duration": "4 hours",
+      "groupSize": "3-12 people",
+      "guides": [
+        {"name": "Kofi Anderson", "rating": 4.9, "reviews": 186},
+        {"name": "Zainab Hussein", "rating": 4.8, "reviews": 124}
+      ],
+      "coordinates": {
+        "lat": -1.2864,
+        "lng": 36.8172
+      },
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7!2d36.817!3d-1.286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f2f5678901234ab%3A0xabcdef5678901234!2sNairobi%20CBD!5e0!3m2!1sen!2sKE!4v5678901234",
+      "availability": {
+        "2026-05": {
+          "02": {"guide": "Kofi", "slots": 10},
+          "03": {"guide": "Zainab", "slots": 8},
+          "05": {"guide": "Kofi", "slots": 9},
+          "07": {"guide": "Zainab", "slots": 7},
+          "09": {"guide": "Kofi", "slots": 10},
+          "10": {"guide": "Zainab", "slots": 6},
+          "12": {"guide": "Kofi", "slots": 8},
+          "14": {"guide": "Zainab", "slots": 9},
+          "16": {"guide": "Kofi", "slots": 7},
+          "17": {"guide": "Zainab", "slots": 10},
+          "19": {"guide": "Kofi", "slots": 8},
+          "21": {"guide": "Zainab", "slots": 5},
+          "23": {"guide": "Kofi", "slots": 10},
+          "24": {"guide": "Zainab", "slots": 9},
+          "26": {"guide": "Kofi", "slots": 6},
+          "28": {"guide": "Zainab", "slots": 8},
+          "30": {"guide": "Kofi", "slots": 7}
+        },
+        "2026-06": {
+          "01": {"guide": "Zainab", "slots": 10},
+          "04": {"guide": "Kofi", "slots": 9},
+          "06": {"guide": "Zainab", "slots": 7},
+          "09": {"guide": "Kofi", "slots": 8},
+          "11": {"guide": "Zainab", "slots": 10},
+          "13": {"guide": "Kofi", "slots": 6},
+          "15": {"guide": "Zainab", "slots": 9},
+          "18": {"guide": "Kofi", "slots": 8}
+        }
+      },
+      "customization": {
+        "activities": [
+          {"id": "live-music", "name": "Live Music Venues", "price": 0},
+          {"id": "food-street", "name": "Food Street Experience", "price": 0},
+          {"id": "cocktails", "name": "Craft Cocktail Class", "price": 1200},
+          {"id": "rooftop", "name": "Rooftop Bar Hopping", "price": 1500}
+        ],
+        "durations": [
+          {"label": "3 hours", "multiplier": 0.85},
+          {"label": "4 hours (default)", "multiplier": 1.0},
+          {"label": "5+ hours", "multiplier": 1.25}
+        ]
+      },
+      "reviews": [
+        {
+          "author": "Sarah Kimani",
+          "location": "Kenya",
+          "rating": 5,
+          "text": "The Nairobi Nightlife tour was unforgettable. Great food, amazing music, and real local experiences. Kofi was an excellent guide!",
+          "date": "2026-04-08"
+        },
+        {
+          "author": "Marco Rossi",
+          "location": "Italy",
+          "rating": 5,
+          "text": "Best night in Nairobi! Visited underground music lounges I would never have found alone. Zainab is a legend!",
+          "date": "2026-04-01"
+        },
+        {
+          "author": "Jessica Chen",
+          "location": "Singapore",
+          "rating": 5,
+          "text": "Fantastic tour! The food was incredible and the vibe was electric. Felt safe and had an amazing time!",
+          "date": "2026-03-25"
+        },
+        {
+          "author": "Lucas Silva",
+          "location": "Portugal",
+          "rating": 4,
+          "text": "Really enjoyed this tour. Got to see sides of Nairobi most tourists miss. Only wish we had more time!",
+          "date": "2026-03-18"
+        },
+        {
+          "author": "Priya Sharma",
+          "location": "India",
+          "rating": 5,
+          "text": "One word: WOW. This tour shows you the real Nairobi. Kofi's connections and knowledge are unmatched!",
+          "date": "2026-03-12"
+        },
+        {
+          "author": "Anna Bergström",
+          "location": "Sweden",
+          "rating": 5,
+          "text": "Professional, fun, and incredibly informative. Best night out in Nairobi. Highly recommended!",
+          "date": "2026-03-05"
+        },
+        {
+          "author": "Ravi Patel",
+          "location": "USA",
+          "rating": 4,
+          "text": "Great experience overall. Music venues were cool. Food was tasty. A bit pricey for some items but worth it.",
+          "date": "2026-02-28"
+        },
+        {
+          "author": "Sophie Martin",
+          "location": "France",
+          "rating": 5,
+          "text": "Zainab made the night special. Her passion for Nairobi's music scene is infectious. Brilliant tour!",
+          "date": "2026-02-20"
+        },
+        {
+          "author": "Mohammed Al-Dosari",
+          "location": "Kuwait",
+          "rating": 5,
+          "text": "Excellent knowledge of the nightlife scene. Very safe and well-organized. Would book again!",
+          "date": "2026-02-15"
+        },
+        {
+          "author": "Olivia Thompson",
+          "location": "Canada",
+          "rating": 4,
+          "text": "Really fun night! Guides are knowledgeable and friendly. Some venues were a bit crowded but overall great!",
+          "date": "2026-02-10"
+        }
+      ],
+      "reviewStats": {
+        "averageRating": 4.7,
+        "totalReviews": 289
+      }
+    },
+    {
+      "id": "lens-and-legend",
+      "name": "Lens & Legends",
+      "shortDesc": "Capture Nairobi's urban beauty with local storytellers and guides",
+      "fullDesc": "Perfect for photographers and visual storytellers! Explore Nairobi's most photogenic locations through the lens of professional guides. Learn composition, local stories behind iconic spots, and capture authentic moments. Walk through vibrant street art, architectural gems, and candid street photography opportunities.",
+      "image": "files/lens%201.jpg",
+      "basePrice": 6500,
+      "currency": "KES",
+      "duration": "3.5 hours",
+      "groupSize": "2-8 people",
+      "guides": [
+        {"name": "Amara Okafor", "rating": 4.9, "reviews": 132},
+        {"name": "Victor Mwangi", "rating": 4.8, "reviews": 89}
+      ],
+      "coordinates": {
+        "lat": -1.2784,
+        "lng": 36.8160
+      },
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8!2d36.816!3d-1.278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f2f6!2d36.81!4v7891011121",
+      "availability": {
+        "2026-05": {
+          "01": {"guide": "Amara", "slots": 6},
+          "02": {"guide": "Victor", "slots": 8},
+          "04": {"guide": "Amara", "slots": 7},
+          "06": {"guide": "Victor", "slots": 5},
+          "08": {"guide": "Amara", "slots": 8},
+          "10": {"guide": "Victor", "slots": 6},
+          "13": {"guide": "Amara", "slots": 7},
+          "15": {"guide": "Victor", "slots": 8},
+          "17": {"guide": "Amara", "slots": 6},
+          "19": {"guide": "Victor", "slots": 7},
+          "21": {"guide": "Amara", "slots": 8},
+          "23": {"guide": "Victor", "slots": 5},
+          "25": {"guide": "Amara", "slots": 8},
+          "27": {"guide": "Victor", "slots": 6},
+          "29": {"guide": "Amara", "slots": 7}
+        },
+        "2026-06": {
+          "02": {"guide": "Victor", "slots": 8},
+          "05": {"guide": "Amara", "slots": 7},
+          "08": {"guide": "Victor", "slots": 6},
+          "11": {"guide": "Amara", "slots": 8},
+          "14": {"guide": "Victor", "slots": 7},
+          "17": {"guide": "Amara", "slots": 6},
+          "20": {"guide": "Victor", "slots": 8}
+        }
+      },
+      "customization": {
+        "activities": [
+          {"id": "street-art", "name": "Street Art Photography", "price": 0},
+          {"id": "architecture", "name": "Architectural Tour", "price": 0},
+          {"id": "portrait", "name": "Portrait Photography Class", "price": 1800},
+          {"id": "editing", "name": "Post-Processing Workshop", "price": 2200}
+        ],
+        "durations": [
+          {"label": "2.5 hours", "multiplier": 0.8},
+          {"label": "3.5 hours (default)", "multiplier": 1.0},
+          {"label": "5 hours", "multiplier": 1.35}
+        ]
+      },
+      "reviews": [
+        {
+          "author": "Alexander König",
+          "location": "Germany",
+          "rating": 5,
+          "text": "Brilliant! Amara's knowledge of composition and lighting is exceptional. Got some incredible shots and learned so much!",
+          "date": "2026-04-12"
+        },
+        {
+          "author": "Kayla Washington",
+          "location": "USA",
+          "rating": 5,
+          "text": "As a photographer, this tour was exactly what I needed. Victor's stories behind each location were fascinating!",
+          "date": "2026-04-05"
+        },
+        {
+          "author": "Hideki Tanaka",
+          "location": "Japan",
+          "rating": 5,
+          "text": "Exceptional guide! Learned a lot about composition and got beautiful photos of Nairobi. Highly recommended!",
+          "date": "2026-03-30"
+        },
+        {
+          "author": "Louise Mercier",
+          "location": "Canada",
+          "rating": 4,
+          "text": "Great tour for photographers. The locations were amazing and Amara was very helpful with tips. Worth every penny!",
+          "date": "2026-03-22"
+        },
+        {
+          "author": "Raj Krishnan",
+          "location": "India",
+          "rating": 5,
+          "text": "Victor made the tour incredibly interesting with stories and photography techniques. My photos came out amazing!",
+          "date": "2026-03-15"
+        },
+        {
+          "author": "Emma Thompson",
+          "location": "UK",
+          "rating": 5,
+          "text": "Perfect for anyone who loves photography and travel. Amara's passion is contagious. Will definitely book again!",
+          "date": "2026-03-10"
+        },
+        {
+          "author": "Carlos Mendez",
+          "location": "Mexico",
+          "rating": 4,
+          "text": "Great experience overall. Got some beautiful shots. Maybe could have gone to a couple more locations.",
+          "date": "2026-03-05"
+        },
+        {
+          "author": "Yuki Yamamoto",
+          "location": "Japan",
+          "rating": 5,
+          "text": "Victor is an amazing photographer and tour guide. Learned technique and history in one tour. Fantastic!",
+          "date": "2026-02-28"
+        },
+        {
+          "author": "Petra Neumann",
+          "location": "Austria",
+          "rating": 5,
+          "text": "One of the best photography tours I've done. Amara's eye for composition is inspiring. Highly recommend!",
+          "date": "2026-02-20"
+        },
+        {
+          "author": "Santiago Rodriguez",
+          "location": "Chile",
+          "rating": 4,
+          "text": "Very informative tour with great photo opportunities. Victor was professional and knowledgeable!",
+          "date": "2026-02-15"
+        }
+      ],
+      "reviewStats": {
+        "averageRating": 4.7,
+        "totalReviews": 198
+      }
+    },
+    {
+      "id": "seasoned-tours",
+      "name": "Seasoned Tours",
+      "shortDesc": "Experience world events in Nairobi — special celebrations, watch parties, and seasonal adventures",
+      "fullDesc": "Connect with global events while experiencing authentic Nairobi! Join fellow travelers for Valentine's celebrations, FIFA World Cup watch parties, star gazing nights, and seasonal festivals. Each tour is uniquely timed to major world events, offering both cultural immersion and shared adventure.",
+      "image": "files/Seasoned%201.jpg",
+      "basePrice": 7500,
+      "currency": "KES",
+      "duration": "4-5 hours",
+      "groupSize": "4-15 people",
+      "guides": [
+        {"name": "Kamau Kipchoge", "rating": 4.9, "reviews": 156},
+        {"name": "Rachel Ouma", "rating": 4.8, "reviews": 103}
+      ],
+      "coordinates": {
+        "lat": -1.2950,
+        "lng": 36.7869
+      },
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7!2d36.787!3d-1.295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f2f7!2d36.79!4v1213141516",
+      "availability": {
+        "2026-05": {
+          "02": {"guide": "Kamau", "slots": 12},
+          "05": {"guide": "Rachel", "slots": 10},
+          "09": {"guide": "Kamau", "slots": 14},
+          "12": {"guide": "Rachel", "slots": 11},
+          "16": {"guide": "Kamau", "slots": 13},
+          "19": {"guide": "Rachel", "slots": 9},
+          "23": {"guide": "Kamau", "slots": 12},
+          "26": {"guide": "Rachel", "slots": 10},
+          "30": {"guide": "Kamau", "slots": 13}
+        },
+        "2026-06": {
+          "02": {"guide": "Rachel", "slots": 12},
+          "06": {"guide": "Kamau", "slots": 11},
+          "10": {"guide": "Rachel", "slots": 13},
+          "14": {"guide": "Kamau", "slots": 10},
+          "18": {"guide": "Rachel", "slots": 12},
+          "22": {"guide": "Kamau", "slots": 11}
+        }
+      },
+      "customization": {
+        "activities": [
+          {"id": "watch-party", "name": "FIFA/Sports Watch Party", "price": 0},
+          {"id": "celebration", "name": "Special Event Celebration", "price": 0},
+          {"id": "stargazing", "name": "Star Gazing Night", "price": 1000},
+          {"id": "festival", "name": "Local Festival Experience", "price": 1200}
+        ],
+        "durations": [
+          {"label": "3 hours", "multiplier": 0.85},
+          {"label": "4 hours (default)", "multiplier": 1.0},
+          {"label": "5+ hours", "multiplier": 1.3}
+        ]
+      },
+      "reviews": [
+        {
+          "author": "Marcus Johnson",
+          "location": "USA",
+          "rating": 5,
+          "text": "Watched the World Cup with locals in Nairobi! What an experience. Kamau's passion for sports and culture shined through!",
+          "date": "2026-03-20"
+        },
+        {
+          "author": "Anita Verma",
+          "location": "India",
+          "rating": 5,
+          "text": "The Valentine's special was romantic and culturally rich. Rachel made it unforgettable. Would highly recommend!",
+          "date": "2026-02-15"
+        },
+        {
+          "author": "Felix Mueller",
+          "location": "Germany",
+          "rating": 5,
+          "text": "Star gazing with knowledgeable guides in Nairobi! Kamau shared incredible stories about constellations and Kenyan culture!",
+          "date": "2026-01-30"
+        },
+        {
+          "author": "Sophia Greco",
+          "location": "Italy",
+          "rating": 4,
+          "text": "Great experience celebrating with locals. Rachel's enthusiasm is contagious. The food was delicious too!",
+          "date": "2026-02-20"
+        },
+        {
+          "author": "Sameer Al-Said",
+          "location": "Egypt",
+          "rating": 5,
+          "text": "Excellent event-focused tour! Kamau's knowledge of Nairobi's seasonal events is impressive. Will book again!",
+          "date": "2026-01-15"
+        },
+        {
+          "author": "Yuki Suzuki",
+          "location": "Japan",
+          "rating": 5,
+          "text": "Festival tour was phenomenal! Rachel showed us authentic celebrations and the real heartbeat of Nairobi. Love it!",
+          "date": "2025-12-28"
+        },
+        {
+          "author": "Lucia Rosselli",
+          "location": "Spain",
+          "rating": 4,
+          "text": "Event-based tours are unique. Had a great time at the celebration. Kamau was very organized and friendly.",
+          "date": "2025-12-20"
+        },
+        {
+          "author": "Ahmed Hassan",
+          "location": "UAE",
+          "rating": 5,
+          "text": "Incredible experience celebrating world events in Nairobi with like-minded travelers. Rachel was fantastic!",
+          "date": "2025-12-15"
+        },
+        {
+          "author": "Caroline Nielsen",
+          "location": "Denmark",
+          "rating": 5,
+          "text": "Star gazing tour was magical! Kamau's stories and the clear Nairobi skies made it unforgettable!",
+          "date": "2025-12-10"
+        },
+        {
+          "author": "Miguel Santos",
+          "location": "Brazil",
+          "rating": 4,
+          "text": "Great way to celebrate events while traveling. Rachel's knowledge and passion made the difference!",
+          "date": "2025-12-05"
+        }
+      ],
+      "reviewStats": {
+        "averageRating": 4.7,
+        "totalReviews": 234
+      }
+    },
+    {
+      "id": "wildlife",
+      "name": "Wildlife Safari",
+      "shortDesc": "Experience Kenya's iconic wildlife — Big Five in Masai Mara, Mount Kilimanjaro views in Amboseli",
+      "fullDesc": "Venture beyond Nairobi to witness Kenya's legendary wildlife! Spot the Big Five in Masai Mara's vast savannas, experience Amboseli's elephant herds with Kilimanjaro backdrop, or explore other iconic wildlife reserves. Led by expert naturalists, this immersive safari combines thrilling wildlife encounters with cultural experiences.",
+      "image": "files/wildlife.mp4",
+      "basePrice": 18000,
+      "currency": "KES",
+      "duration": "2-3 days",
+      "groupSize": "2-8 people",
+      "guides": [
+        {"name": "Dr. John Kariuki", "rating": 4.9, "reviews": 267},
+        {"name": "Margaret Kiplagat", "rating": 4.9, "reviews": 198}
+      ],
+      "coordinates": {
+        "lat": -1.5,
+        "lng": 35.5
+      },
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.5!2d35.5!3d-1.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f3d!2d35.5!4v1617181920",
+      "availability": {
+        "2026-05": {
+          "03": {"guide": "John", "slots": 6},
+          "10": {"guide": "Margaret", "slots": 7},
+          "17": {"guide": "John", "slots": 5},
+          "24": {"guide": "Margaret", "slots": 8}
+        },
+        "2026-06": {
+          "02": {"guide": "John", "slots": 7},
+          "09": {"guide": "Margaret", "slots": 6},
+          "16": {"guide": "John", "slots": 8},
+          "23": {"guide": "Margaret", "slots": 7}
+        }
+      },
+      "customization": {
+        "activities": [
+          {"id": "big-five", "name": "Big Five Safari", "price": 0},
+          {"id": "elephant", "name": "Elephant Encounter (Amboseli)", "price": 0},
+          {"id": "photography", "name": "Wildlife Photography", "price": 2500},
+          {"id": "camping", "name": "Overnight Safari Camping", "price": 3000}
+        ],
+        "durations": [
+          {"label": "1 day", "multiplier": 0.7},
+          {"label": "2 days (default)", "multiplier": 1.0},
+          {"label": "3 days", "multiplier": 1.4}
+        ]
+      },
+      "reviews": [
+        {
+          "author": "Robert Anderson",
+          "location": "USA",
+          "rating": 5,
+          "text": "Incredible safari experience! Dr. Kariuki's knowledge of wildlife behavior is unmatched. Saw the Big Five and so much more!",
+          "date": "2026-03-15"
+        },
+        {
+          "author": "Susan Thompson",
+          "location": "UK",
+          "rating": 5,
+          "text": "Margaret's expertise and passion for wildlife conservation was inspiring. One of the best safaris I've ever done!",
+          "date": "2026-03-10"
+        },
+        {
+          "author": "Klaus Wagner",
+          "location": "Germany",
+          "rating": 5,
+          "text": "Outstanding safari! Dr. Kariuki spotted wildlife I would never have seen alone. Worth every penny!",
+          "date": "2026-02-28"
+        },
+        {
+          "author": "Patricia Lopez",
+          "location": "Spain",
+          "rating": 5,
+          "text": "Margaret made the experience magical. Saw elephants with Kilimanjaro in the background — a dream come true!",
+          "date": "2026-02-20"
+        },
+        {
+          "author": "David Chen",
+          "location": "Singapore",
+          "rating": 5,
+          "text": "Best wildlife experience of my life! Dr. Kariuki's insights into animal behavior and conservation were fascinating!",
+          "date": "2026-02-15"
+        },
+        {
+          "author": "Maria Gonzalez",
+          "location": "Mexico",
+          "rating": 5,
+          "text": "Phenomenal safari! Margaret's knowledge and the accommodations were excellent. Highly recommend!",
+          "date": "2026-02-10"
+        },
+        {
+          "author": "Vincent Laurent",
+          "location": "France",
+          "rating": 5,
+          "text": "Dr. Kariuki is a true wildlife expert. Every moment was thrilling and educational. Unforgettable!",
+          "date": "2026-02-05"
+        },
+        {
+          "author": "Priya Singh",
+          "location": "India",
+          "rating": 4,
+          "text": "Amazing safari experience. Margaret was knowledgeable. Would've appreciated more time in Amboseli.",
+          "date": "2026-01-30"
+        },
+        {
+          "author": "Erik Svensson",
+          "location": "Sweden",
+          "rating": 5,
+          "text": "Excellent safari! Dr. Kariuki's conservation work is inspiring. Loved learning about Kenya's wildlife!",
+          "date": "2026-01-25"
+        },
+        {
+          "author": "Yuki Nakamura",
+          "location": "Japan",
+          "rating": 5,
+          "text": "Incredible experience! Margaret's passion and expertise made this safari unforgettable. Will book again!",
+          "date": "2026-01-20"
+        }
+      ],
+      "reviewStats": {
+        "averageRating": 4.8,
+        "totalReviews": 412
+      }
+    },
+    {
+      "id": "airport-transfers",
+      "name": "Airport Transfers",
+      "shortDesc": "Seamless transport from Jomo Kenyatta International Airport to your Nairobi hotel with professional drivers",
+      "fullDesc": "Start your Nairobi adventure stress-free! Professional drivers will meet you at Jomo Kenyatta International Airport with a personalized welcome sign. Enjoy comfortable air-conditioned vehicles, real-time tracking, and helpful arrival support. Perfect for first-time visitors and busy travelers.",
+      "image": "files/Urban%20Pulse.png",
+      "basePrice": 3500,
+      "currency": "KES",
+      "duration": "1-2 hours",
+      "groupSize": "1-4 people",
+      "guides": [
+        {"name": "James Kipchoge (Driver)", "rating": 4.8, "reviews": 534},
+        {"name": "Felix Omondi (Driver)", "rating": 4.8, "reviews": 478}
+      ],
+      "coordinates": {
+        "lat": -3.7167,
+        "lng": 40.1969
+      },
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.2!2d40.197!3d-3.717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184156!2d40.197!4v2122232425",
+      "availability": {
+        "2026-05": {
+          "01": {"guide": "James", "slots": 20},
+          "02": {"guide": "Felix", "slots": 20},
+          "03": {"guide": "James", "slots": 20},
+          "04": {"guide": "Felix", "slots": 20},
+          "05": {"guide": "James", "slots": 20},
+          "06": {"guide": "Felix", "slots": 20},
+          "07": {"guide": "James", "slots": 20},
+          "08": {"guide": "Felix", "slots": 20},
+          "09": {"guide": "James", "slots": 20},
+          "10": {"guide": "Felix", "slots": 20},
+          "11": {"guide": "James", "slots": 20},
+          "12": {"guide": "Felix", "slots": 20},
+          "13": {"guide": "James", "slots": 20},
+          "14": {"guide": "Felix", "slots": 20},
+          "15": {"guide": "James", "slots": 20},
+          "16": {"guide": "Felix", "slots": 20},
+          "17": {"guide": "James", "slots": 20},
+          "18": {"guide": "Felix", "slots": 20},
+          "19": {"guide": "James", "slots": 20},
+          "20": {"guide": "Felix", "slots": 20},
+          "21": {"guide": "James", "slots": 20},
+          "22": {"guide": "Felix", "slots": 20},
+          "23": {"guide": "James", "slots": 20},
+          "24": {"guide": "James", "slots": 20},
+          "25": {"guide": "Felix", "slots": 20},
+          "26": {"guide": "James", "slots": 20},
+          "27": {"guide": "Felix", "slots": 20},
+          "28": {"guide": "James", "slots": 20},
+          "29": {"guide": "Felix", "slots": 20},
+          "30": {"guide": "James", "slots": 20},
+          "31": {"guide": "Felix", "slots": 20}
+        },
+        "2026-06": {
+          "01": {"guide": "James", "slots": 20},
+          "02": {"guide": "Felix", "slots": 20},
+          "03": {"guide": "James", "slots": 20},
+          "04": {"guide": "Felix", "slots": 20},
+          "05": {"guide": "James", "slots": 20},
+          "06": {"guide": "Felix", "slots": 20},
+          "07": {"guide": "James", "slots": 20},
+          "08": {"guide": "Felix", "slots": 20},
+          "09": {"guide": "James", "slots": 20},
+          "10": {"guide": "James", "slots": 20},
+          "11": {"guide": "Felix", "slots": 20},
+          "12": {"guide": "James", "slots": 20},
+          "13": {"guide": "Felix", "slots": 20},
+          "14": {"guide": "James", "slots": 20},
+          "15": {"guide": "Felix", "slots": 20}
+        }
+      },
+      "customization": {
+        "activities": [
+          {"id": "basic", "name": "Basic Transfer (JKIA to Hotel)", "price": 0},
+          {"id": "city-tour", "name": "Quick City Orientation", "price": 1500},
+          {"id": "welcome-pack", "name": "Welcome Pack (SIM, tips, info)", "price": 800}
+        ],
+        "durations": [
+          {"label": "1 hour", "multiplier": 0.9},
+          {"label": "1.5 hours (default)", "multiplier": 1.0},
+          {"label": "2+ hours (with stops)", "multiplier": 1.2}
+        ]
+      },
+      "reviews": [
+        {
+          "author": "Timothy Brown",
+          "location": "USA",
+          "rating": 5,
+          "text": "Excellent service! James was punctual, professional, and made my arrival in Nairobi smooth and pleasant!",
+          "date": "2026-04-20"
+        },
+        {
+          "author": "Catherine Wilson",
+          "location": "UK",
+          "rating": 5,
+          "text": "Felix was wonderful! Clean car, safe driving, and great conversation. Highly recommend this service!",
+          "date": "2026-04-18"
+        },
+        {
+          "author": "Michael O'Brien",
+          "location": "Ireland",
+          "rating": 5,
+          "text": "Professional and reliable! James picked me up right on time and got me to my hotel quickly and safely!",
+          "date": "2026-04-15"
+        },
+        {
+          "author": "Ingrid Hansen",
+          "location": "Norway",
+          "rating": 5,
+          "text": "Great first impression of Nairobi thanks to Felix! Comfortable car and excellent driving skills!",
+          "date": "2026-04-10"
+        },
+        {
+          "author": "Jorge Martinez",
+          "location": "Argentina",
+          "rating": 5,
+          "text": "James made my airport transfer seamless. Professional, punctual, and very friendly. Exactly as promised!",
+          "date": "2026-04-05"
+        },
+        {
+          "author": "Sofia Rossi",
+          "location": "Italy",
+          "rating": 5,
+          "text": "Felix is an excellent driver and gave great recommendations for things to do in Nairobi!",
+          "date": "2026-04-01"
+        },
+        {
+          "author": "Andreas Mueller",
+          "location": "Germany",
+          "rating": 5,
+          "text": "Reliable and professional service! James' vehicle was clean and the ride was comfortable. Highly recommended!",
+          "date": "2026-03-28"
+        },
+        {
+          "author": "Lisa Anderson",
+          "location": "Canada",
+          "rating": 4,
+          "text": "Good service overall. Felix was friendly and the car was comfortable. Price is fair for the convenience!",
+          "date": "2026-03-25"
+        },
+        {
+          "author": "Romain Dupont",
+          "location": "France",
+          "rating": 5,
+          "text": "James provided excellent service. Professional, punctual, and very knowledgeable about Nairobi!",
+          "date": "2026-03-20"
+        },
+        {
+          "author": "Kenji Yamamoto",
+          "location": "Japan",
+          "rating": 5,
+          "text": "Felix was punctual and professional. Safe driving and good conversation. Perfect start to my trip!",
+          "date": "2026-03-15"
+        }
+      ],
+      "reviewStats": {
+        "averageRating": 4.8,
+        "totalReviews": 1087
+      }
+    }
+  ]
+}
