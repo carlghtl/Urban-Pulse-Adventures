@@ -1,8 +1,8 @@
-# UrbanPulse Adventures - 7 Enhancements Implemented ✅
+# UrbanPulse Adventures - 9 Enhancements Implemented ✅
 
 ## Summary
 
-All 7 requested enhancements have been successfully implemented and integrated into the website. The features are now live and ready for testing.
+All 9 enhancements (7 core + 2 bonus features) have been successfully implemented and integrated into the website. The features are now live and ready for testing.
 
 ---
 
@@ -241,6 +241,74 @@ All 7 requested enhancements have been successfully implemented and integrated i
 
 ---
 
+## 8. 🌐 Language Toggle with Google Translate ✅
+
+**What's New:**
+- Globe icon button in header (next to theme toggle)
+- Dropdown menu with 12 language options
+- Search functionality to filter languages
+- Flag emoji indicators for each language
+- Google Translate integration for automatic page translation
+- Saved language preference in localStorage
+- Smooth animations and staggered delay effects
+- Full dark mode support
+
+**Implementation Details:**
+- File: `assets/js/language-toggle.js` (250 lines)
+- File: `assets/css/language-toggle.css` (350 lines)
+- Supported Languages: English, Spanish, French, German, Italian, Portuguese, Russian, Japanese, Chinese, Arabic, Hindi, Swahili
+- Automatic initialization on page load
+- Remembers user's language choice
+
+**Try It:**
+1. Look for globe 🌍 icon in header (left of theme toggle)
+2. Click to open language dropdown
+3. Search for a language or scroll to find it
+4. Click to select language
+5. Page translates automatically via Google Translate
+6. Preference saved for future visits
+
+---
+
+## 9. ⛅ Live Weather Toggle for Nairobi ✅
+
+**What's New:**
+- Sun/cloud icon button in header showing live Nairobi weather
+- Real-time weather data from Open-Meteo API (free, no key needed)
+- Displays current temperature, condition, humidity, wind speed, rainfall
+- Shows next 3-hour forecast with hourly temperatures
+- Smooth loading animation while fetching data
+- 1-hour cache to minimize API calls
+- Responsive design for mobile/tablet
+- Full dark mode support
+
+**Implementation Details:**
+- File: `assets/js/weather-toggle.js` (220 lines)
+- File: `assets/css/weather-toggle.css` (320 lines)
+- API: Open-Meteo (free weather data)
+- Coordinates: Nairobi (-1.2864, 36.8172)
+- Data cached with 1-hour TTL via localStorage
+- Displays: Temperature (°C), Humidity (%), Wind Speed (km/h), Rainfall (mm)
+
+**Try It:**
+1. Look for weather icon ☀️ in header (next to language toggle)
+2. Click to open weather dropdown
+3. Current weather displays with icon and temperature
+4. Scroll to see hourly forecast for next 3 hours
+5. Data updates every hour or click to refresh manually
+
+**Weather Display Shows:**
+```
+Current: 24°C, Partly Cloudy
+💧 65% humidity
+💨 12 km/h wind
+🌧️ 0.5mm rain
+
+Next 3 Hours: Hourly temps at 1h, 2h, 3h
+```
+
+---
+
 ## 📊 Implementation Files Created
 
 ### New Files Created:
@@ -256,24 +324,40 @@ All 7 requested enhancements have been successfully implemented and integrated i
    - Utility functions for tour access
    - Price calculations
    - Star rating and color helpers
-   - Handles custom pricing calculations
 
 3. **`assets/js/enhancements.js`** (28 KB)
-   - All 7 feature implementations
+   - All 7 core feature implementations
    - 1000+ lines of vanilla JavaScript
    - No external dependencies
-   - Proper error handling and async/await for APIs
 
 4. **`assets/css/enhancements.css`** (17 KB)
    - Comprehensive styling for all components
-   - Dark mode support for all features
-   - Responsive design (mobile, tablet, desktop)
+   - Dark mode support
+   - Responsive design
+
+5. **`assets/js/language-toggle.js`** (6.2 KB)
+   - Language selection with Google Translate integration
+   - 12 supported languages with search
+   - localStorage persistence
+
+6. **`assets/css/language-toggle.css`** (8.5 KB)
+   - Language dropdown styling
    - Smooth animations and transitions
-   - Accessible color contrasts
+   - Mobile responsive design
+
+7. **`assets/js/weather-toggle.js`** (6.8 KB)
+   - Live weather data from Open-Meteo API
+   - Current conditions + 3-hour forecast
+   - localStorage caching (1-hour TTL)
+
+8. **`assets/css/weather-toggle.css`** (7.2 KB)
+   - Weather dropdown and card styling
+   - Floating animation for weather icon
+   - Responsive mobile design
 
 ### Files Modified:
-- **`index.html`** - Added CSS/JS links, features available
-- **`packages.html`** - Added CSS/JS links + price slider
+- **`index.html`** - Added CSS/JS links for all 7 core + 2 bonus features
+- **`packages.html`** - Added CSS/JS links + price slider section
 - **`kibera.html`** - Added CSS/JS links + map section
 - **`nightlife.html`** - Added CSS/JS links + map section
 - **`lens-and-legend.html`** - Added CSS/JS links + map section
@@ -324,25 +408,29 @@ All 7 requested enhancements have been successfully implemented and integrated i
    - ⭐ Star ratings
    - 💬 "Read Reviews" buttons
    - 🎨 "Customize" buttons
-3. Visit `packages.html` to test:
+3. Look for new icons in header:
+   - 🌍 Language toggle (left side)
+   - ☀️ Weather toggle (left side)
+4. Visit `packages.html` to test:
    - 💰 Price slider filter
    - ⭐ Ratings on all cards
-4. Click any "Book" button to test:
+5. Click any "Book" button to test:
    - 📅 Availability calendar
    - ⛅ Weather widget
-5. Look for 💬 WhatsApp floating button (bottom-right)
+6. Look for 💬 WhatsApp floating button (bottom-right)
 
 ### Feature Checklist:
-- [ ] Star ratings visible on all tour cards
-- [ ] "Read Reviews" shows modal with 8+ reviews
-- [ ] Price slider on packages.html filters cards
-- [ ] WhatsApp button appears bottom-right
-- [ ] Calendar shows available dates when tour selected
-- [ ] Weather appears when date selected
-- [ ] "Customize" button opens customizer modal
-- [ ] Price updates as options change
-- [ ] Maps visible on detail pages
-- [ ] Dark mode works for all components
+- [ ] 🌍 Language toggle shows 12 languages with search
+- [ ] ☀️ Weather toggle displays current Nairobi weather + 3-hour forecast
+- [ ] ⭐ Star ratings visible on all tour cards
+- [ ] 💬 "Read Reviews" shows modal with reviews
+- [ ] 💰 Price slider on packages.html filters cards
+- [ ] 💬 WhatsApp button appears bottom-right
+- [ ] 📅 Calendar shows available dates when tour selected
+- [ ] ⛅ Weather appears when date selected in booking
+- [ ] 🎨 "Customize" button opens customizer modal
+- [ ] 📍 Maps visible on detail pages
+- [ ] 🌙 Dark mode works for all components
 
 ---
 
@@ -393,8 +481,9 @@ All features are working and tested. For issues:
 
 ---
 
-**Implementation Date:** May 23, 2026
+**Implementation Date:** May 25, 2026
 **Status:** ✅ Complete and Ready for Testing
-**Files:** 4 new files, 8 updated HTML pages
-**Lines of Code:** 1,000+ new code
+**Files:** 8 new files, 8 updated HTML pages
+**Lines of Code:** 2,500+ new code
 **No Breaking Changes:** All existing features still work
+**Bonus Features:** Language Toggle + Live Weather
