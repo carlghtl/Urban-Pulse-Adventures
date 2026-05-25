@@ -648,7 +648,6 @@ const enhancements = (() => {
       initReviewDisplay();
       initWhatsAppButton();
       initAvailabilityCalendar();
-      initCustomizer();
       initWeatherWidget();
       initTourMaps();
       initPriceSlider();
@@ -668,7 +667,6 @@ const enhancements = (() => {
     initPriceSlider,
     initWhatsAppButton,
     initAvailabilityCalendar,
-    initCustomizer,
     initWeatherWidget,
     initTourMaps
   };
