@@ -360,6 +360,24 @@
       });
     });
 
+    // Show/hide tier select when tour requires it (e.g., Kibera tiers)
+    const tourSelectElem = form.querySelector('#bookingTour');
+    const tierSelectElem = form.querySelector('#bookingTier');
+    if (tourSelectElem && tierSelectElem) {
+      function updateTierVisibility() {
+        if (tourSelectElem.value === 'kibera') {
+          tierSelectElem.style.display = '';
+          tierSelectElem.required = true;
+        } else {
+          tierSelectElem.style.display = 'none';
+          tierSelectElem.required = false;
+          tierSelectElem.value = '';
+        }
+      }
+      tourSelectElem.addEventListener('change', updateTierVisibility);
+      updateTierVisibility();
+    }
+
     function validateField(field) {
       const group = field.closest('.form-group');
       if (!group) return true;
@@ -414,11 +432,16 @@
         const fm = new FormData(form);
         const name = fm.get('name') || 'friend';
         const tour = fm.get('tour');
+        const tourText = form.querySelector('#bookingTour option:checked')?.textContent || tour;
+        const tier = fm.get('tier');
+        const tierText = tier ? (form.querySelector('#bookingTier option:checked')?.textContent || tier) : null;
         const date = fm.get('date');
         const time = fm.get('time');
 
+        const display = tierText ? (tierText + ' — ' + tourText) : tourText;
+
         if (msg) {
-          msg.innerHTML = '<strong>Booking Received!</strong><br>Thanks ' + name + ' \u2014 your request for "' + tour + '" on ' + date + ' at ' + time + ' was received! We\'ll contact you within 24 hours.';
+          msg.innerHTML = '<strong>Booking Received!</strong><br>Thanks ' + name + ' \u2014 your request for "' + display + '" on ' + date + ' at ' + time + ' was received! We\'ll contact you within 24 hours.';
           msg.className = 'booking-message success';
         }
 

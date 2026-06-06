@@ -318,9 +318,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     <option value="kibera">Kibera Slum Tour</option>
                     <option value="wildlife">Nairobi Wildlife Safari</option>
                     <option value="nightlife">Nightlife Experience</option>
-                    <option value="lens-and-legend">Lens & Legend Photo Tour</option>
+                    <option value="lens-and-legend">Lens &amp; Legend Photo Tour</option>
                     <option value="seasoned-tours">Seasoned Tours</option>
                     <option value="packages">Custom Package</option>
+                  </select>
+                  <select id="bookingTier" name="tier" style="display:none; margin-top:.5rem;">
+                    <option value="" disabled selected>Select package (if applicable)</option>
+                    <option value="pulse_circuit">Pulse Circuit (Basic) — $170</option>
+                    <option value="urban_navigator">Urban Navigator (Standard) — $270</option>
+                    <option value="elite_horizon">Elite Horizon (Premium) — $450</option>
                   </select>
                   <span class="input-status"></span>
                 </div>

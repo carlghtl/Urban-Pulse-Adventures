@@ -141,15 +141,21 @@ const Components = (function() {
                     <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <polygon points="3 11 22 2 13 21 11 13 3 11"/>
                     </svg>
-                    <select id="bookingTour" name="tour" required>
-                      <option value="" disabled selected>Choose a tour...</option>
-                      <option value="Kibera Street Vibes">Kibera Street Vibes</option>
-                      <option value="Nairobi Nightlife">Nairobi Nightlife</option>
-                      <option value="Lens & Legends">Lens & Legends</option>
-                      <option value="Seasoned Tours">Seasoned Tours</option>
-                      <option value="Wildlife Safari">Wildlife Safari</option>
-                      <option value="Custom Tour">Custom Tour</option>
-                    </select>
+                      <select id="bookingTour" name="tour" required>
+                        <option value="" disabled selected>Choose a tour...</option>
+                        <option value="kibera">Kibera Street Vibes</option>
+                        <option value="nightlife">Nairobi Nightlife</option>
+                        <option value="lens-and-legend">Lens &amp; Legends</option>
+                        <option value="seasoned-tours">Seasoned Tours</option>
+                        <option value="wildlife">Wildlife Safari</option>
+                        <option value="custom">Custom Tour</option>
+                      </select>
+                      <select id="bookingTier" name="tier" style="display:none; margin-top:.5rem;">
+                        <option value="" disabled selected>Select package (if applicable)</option>
+                        <option value="pulse_circuit">Pulse Circuit (Basic) — $170</option>
+                        <option value="urban_navigator">Urban Navigator (Standard) — $270</option>
+                        <option value="elite_horizon">Elite Horizon (Premium) — $450</option>
+                      </select>
                     <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <polyline points="6 9 12 15 18 9"/>
                     </svg>

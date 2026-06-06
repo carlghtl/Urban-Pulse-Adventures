@@ -140,6 +140,30 @@
         "averageRating": 4.7,
         "totalReviews": 247
       }
+    ,
+      "tiers": [
+        {
+          "id": "pulse_circuit",
+          "name": "Pulse Circuit",
+          "tier": "Basic",
+          "price": 170,
+          "currency": "USD"
+        },
+        {
+          "id": "urban_navigator",
+          "name": "Urban Navigator",
+          "tier": "Standard",
+          "price": 270,
+          "currency": "USD"
+        },
+        {
+          "id": "elite_horizon",
+          "name": "Elite Horizon",
+          "tier": "Premium",
+          "price": 450,
+          "currency": "USD"
+        }
+      ]
     },
     {
       "id": "nightlife",
