@@ -199,7 +199,7 @@ const enhancements = (() => {
 
   // ===== WHATSAPP FLOATING BUTTON =====
   function initWhatsAppButton() {
-    const contactData = tourData.getTour('kibera')?.contact || { whatsapp: '+254724355530', telegram: '@urbanpulseadventures' };
+    const contactData = tourData.getTour('kibera')?.contact || { whatsapp: 'https://wa.link/743o72', telegram: '@urbanpulseadventures', phone: '+254712866733', email: 'urbanpulseadventures254.org@gmail.com', instagram: 'https://www.instagram.com/upadventures254' };
 
     // Create floating button
     const button = document.createElement('button');
@@ -237,9 +237,13 @@ const enhancements = (() => {
     });
   }
 
-  function generateWhatsAppLink(phoneNumber, message) {
-    const encodedMessage = encodeURIComponent(message);
-    return `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${encodedMessage}`;
+  function generateWhatsAppLink(phoneOrUrl, message) {
+    if (!phoneOrUrl) return '#';
+    // If a full URL (wa.link / wa.me or other) is provided, use it directly
+    if (/^https?:\/\//i.test(phoneOrUrl)) return phoneOrUrl;
+    const encodedMessage = message ? `?text=${encodeURIComponent(message)}` : '';
+    const digits = phoneOrUrl.replace(/\D/g, '');
+    return `https://wa.me/${digits}${encodedMessage}`;
   }
 
   // ===== AVAILABILITY CALENDAR =====
