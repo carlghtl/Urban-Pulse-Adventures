@@ -1,0 +1,94 @@
+/* Responsive helper stylesheet
+   Purpose: Fix responsiveness across devices without altering desktop design.
+   Breakpoints:
+     - Mobile: max-width 768px
+     - Tablet: max-width 1024px
+*/
+
+/* Prevent iOS text auto-scaling */
+html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+/* Ensure media scale correctly */
+img, picture, video, iframe, svg { max-width: 100%; height: auto; display: block; }
+
+/* Make sure images that use attributes don't overflow */
+img[width], img[height] { width: auto; max-width:100%; height:auto; }
+
+/* Utility adjustments that keep desktop intact but improve small screens */
+.container { padding-left: 1rem; padding-right: 1rem; box-sizing: border-box; }
+
+/* Make interactive elements easier to tap */
+button, .btn, input[type="button"], input[type="submit"], .nav-toggle { touch-action: manipulation; -webkit-tap-highlight-color: rgba(0,0,0,0.06); }
+
+/* Ensure cards don't cause overflow */
+.card { overflow: hidden; }
+
+/* Ensure videos and iframes are responsive */
+iframe, video { max-width:100%; height:auto; }
+
+/* NAVIGATION: tablet & mobile behaviour */
+@media (max-width: 1024px) {
+  html, body { overflow-x: hidden; }
+  .header-inner { gap: 0.6rem; }
+  .brand-logo { height:44px; }
+  /* Show hamburger and collapse main nav into an overlay panel */
+  .nav-toggle { display: block; }
+  .main-nav { position: fixed; top: 72px; right: 1rem; transform: translateX(110%); transition: transform .28s ease; background: var(--card); min-width: 220px; max-width: 420px; z-index: 9999; border-radius: 12px; padding: .6rem; box-shadow: var(--shadow-lg); flex-direction: column; gap: .25rem; align-items: flex-start; }
+  .nav-toggle.open + .main-nav { transform: translateX(0); }
+  .main-nav[aria-hidden="true"]{ transform: translateX(110%); }
+  .main-nav[aria-hidden="false"]{ transform: translateX(0); }
+  .main-nav a { display:block; width:100%; padding:.9rem 1rem; font-size:1rem; border-radius:10px; }
+  .main-nav a.book-btn{ align-self:flex-start; }
+  /* Improve tap area */
+  .main-nav a { min-height:44px; }
+}
+
+/* Tablet-specific layout fixes */
+@media (max-width: 768px) {
+  .cinematic-hero { min-height: 60vh; }
+  .hero-card-inner { padding: 1rem; }
+  .card-media, .card img { height: 160px; }
+  /* package page specific image adjustments */
+  .package-image, .package-card img { height: 160px; }
+  .gallery-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .grid { grid-template-columns: repeat(auto-fit, minmax(180px,1fr)) !important; gap: .9rem; }
+  .packages .grid-md-3 { grid-template-columns: 1fr !important; }
+  .features-section .grid, .partners-strip .grid { grid-template-columns: repeat(2,1fr) !important; }
+  .partner { text-align:center; padding:.6rem .4rem; }
+  .btn { min-height: 44px; padding: .75rem 1rem; font-size: 1rem; }
+  .package-card .card-body { padding: 1rem; }
+  .package-features { display:flex; flex-wrap:wrap; gap:.45rem; }
+  .package-feature { font-size:.88rem; padding:.35rem .5rem; border-radius:10px; }
+  .form-row { grid-template-columns: 1fr !important; }
+  .site-footer .footer-grid { grid-template-columns: 1fr !important; padding: 1rem; gap: 1rem; }
+  .site-footer .footer-newsletter { padding-left: 0; border-left: none; }
+  .quick-book .container { display:flex; flex-direction:column; align-items:flex-start; gap:.6rem; }
+}
+
+/* Small/mobile specific */
+@media (max-width: 480px) {
+  .brand-logo { height:40px; }
+  .brand-main{ font-size:1rem; }
+  .brand-sub{ font-size:0.65rem; }
+  .hero-title { font-size: clamp(1.2rem, 6vw, 2rem); }
+  .hero-sub { font-size: 0.95rem; }
+  .hero-actions { gap: .6rem; flex-direction: column; }
+  .btn { width:100%; text-align:center; padding:.85rem; }
+  .card-body { padding: 1rem; }
+  .card-media, .card img { height: 140px; }
+  .package-image, .package-card img { height: 140px; }
+  .gallery-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .testimonial { padding:1rem; }
+  .partners-strip .grid { grid-template-columns: repeat(2,1fr) !important; }
+}
+
+/* Some markup uses inline grid styles - override on smaller screens */
+@media (max-width:1024px) {
+  .features-section .grid[style], .partners-strip .grid[style], .grid[style] { grid-template-columns: repeat(2,1fr) !important; }
+}
+
+/* Extra safety: make sure embedded media won't overflow */
+video, iframe, embed, object { max-width:100%; height:auto; }
+
+/* Keep focus styles usable on small screens */
+:focus { outline: 3px solid rgba(139,101,66,0.18); outline-offset: 2px; }
