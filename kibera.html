@@ -16,26 +16,6 @@
   <link rel="stylesheet" href="assets/css/language-toggle.css">
   <link rel="stylesheet" href="assets/css/kibera.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
-  <style>
-  /* Kibera pricing card styles (page-scoped) */
-  #packages .kibera-pricing-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));align-items:start;margin:0 auto;padding:1rem 0}
-  .kibera-card{background:#ffffff;border-radius:14px;padding:1.4rem;box-shadow:0 10px 30px rgba(12,20,28,0.06);border:1px solid rgba(15,23,30,0.04);position:relative;overflow:hidden;transition:transform .28s ease,box-shadow .28s ease}
-  .kibera-card:hover{transform:translateY(-8px);box-shadow:0 24px 50px rgba(12,20,28,0.12)}
-  .kibera-card .card-accent{height:8px;border-radius:8px 8px 0 0;margin:-1.4rem -1.4rem 1rem;background:linear-gradient(90deg,#2d8a6e,#2b9bdc);box-shadow:0 8px 24px rgba(45,138,110,0.08)}
-  .kibera-card .tier-name{font-size:1.15rem;font-weight:700;margin:0;color:#0f1724}
-  .kibera-card .tier-sub{display:block;font-size:.9rem;color:#64748b;margin-top:6px}
-  .kibera-card .price{font-size:1.6rem;font-weight:800;color:#0b1220;margin:0.6rem 0}
-  .kibera-card .features{list-style:none;padding:0;margin:0.6rem 0 1rem;color:#334155;display:grid;gap:.45rem}
-  .kibera-card .features li{display:flex;align-items:center;gap:.6rem}
-  .kibera-card .features svg{flex:0 0 18px;opacity:.9}
-  .kibera-card .cta{display:inline-flex;align-items:center;gap:.6rem;padding:.6rem 1rem;border-radius:10px;text-decoration:none}
-  .kibera-card.recommended{transform:translateY(-4px) scale(1.02);border:1px solid rgba(45,138,110,0.12);box-shadow:0 26px 60px rgba(45,138,110,0.06)}
-  .kibera-card .popular-badge{position:absolute;top:14px;right:14px;background:linear-gradient(90deg,#ffd54a,#ffb84d);padding:6px 10px;border-radius:999px;font-weight:800;color:#111;font-size:.78rem;box-shadow:0 10px 30px rgba(255,184,77,0.12)}
-  @media (max-width:700px){
-    #packages .kibera-pricing-grid{grid-template-columns:1fr}
-    .kibera-card{padding:1rem}
-  }
-  </style>
 </head>
 <body class="site-preload">
   <script src="assets/js/components.js"></script>
@@ -89,7 +69,7 @@
     <section id="packages" class="container packages">
       <div class="kibera-pricing-grid" aria-label="Kibera pricing options">
         <article class="kibera-card" data-tier="pulse_circuit" aria-labelledby="tier-pulse">
-          <div class="card-accent" style="background:linear-gradient(90deg,#e6fffa,#d1fae5)"></div>
+          <div class="card-accent accent-basic"></div>
           <div class="card-body">
             <h4 id="tier-pulse" class="tier-name">Pulse Circuit <span class="tier-sub">Basic</span></h4>
             <p class="price"><span class="currency">$</span>170</p>
@@ -103,7 +83,7 @@
         </article>
 
         <article class="kibera-card recommended" data-tier="urban_navigator" aria-labelledby="tier-urban">
-          <div class="card-accent" style="background:linear-gradient(90deg,#2d8a6e,#2b9bdc)"></div>
+          <div class="card-accent accent-featured"></div>
           <div class="popular-badge">Most Popular</div>
           <div class="card-body">
             <h4 id="tier-urban" class="tier-name">Urban Navigator <span class="tier-sub">Standard</span></h4>
@@ -118,7 +98,7 @@
         </article>
 
         <article class="kibera-card" data-tier="elite_horizon" aria-labelledby="tier-elite">
-          <div class="card-accent" style="background:linear-gradient(90deg,#6b21a8,#f97316)"></div>
+          <div class="card-accent accent-premium"></div>
           <div class="card-body">
             <h4 id="tier-elite" class="tier-name">Elite Horizon <span class="tier-sub">Premium</span></h4>
             <p class="price"><span class="currency">$</span>450</p>

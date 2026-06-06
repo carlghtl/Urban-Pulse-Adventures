@@ -12,6 +12,45 @@
   gap: 2rem;
   margin-top: 2rem;
 }
+/* Kibera premium pricing cards - theme-aware, page-scoped */
+.kibera-pricing-grid{
+  display:grid;
+  gap:1.25rem;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  align-items:start;
+  margin:1.25rem 0 1.5rem;
+}
+.kibera-card{
+  background:var(--card);
+  border-radius:var(--card-radius);
+  padding:1.25rem;
+  border:1px solid var(--border-light);
+  box-shadow:var(--shadow-md);
+  transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  min-height:340px;
+}
+.kibera-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
+.card-accent{height:8px;border-top-left-radius:calc(var(--card-radius) - 4px);border-top-right-radius:calc(var(--card-radius) - 4px);margin:-1.25rem -1.25rem 1rem -1.25rem;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+.accent-basic{background:linear-gradient(90deg,var(--accent-2),var(--accent))}
+.accent-featured{background:linear-gradient(90deg,var(--green),var(--accent))}
+.accent-premium{background:linear-gradient(90deg,var(--accent-2),var(--accent-3))}
+.kibera-card .tier-name{font-size:1.15rem;font-weight:700;margin:0;color:var(--text)}
+.kibera-card .tier-sub{display:block;font-size:.9rem;color:var(--text-light);margin-top:6px;font-weight:600}
+.kibera-card .price{font-size:1.8rem;font-weight:800;margin:.6rem 0;color:var(--text)}
+.kibera-card .price .currency{font-size:1rem;color:var(--text-light);font-weight:700;margin-right:.3rem}
+.kibera-card .price .amount{background:linear-gradient(90deg,var(--accent-2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:900}
+.kibera-card .features{list-style:none;padding:0;margin:.6rem 0 1rem;display:grid;gap:.5rem;color:var(--text-light)}
+.kibera-card .features li{display:flex;align-items:center;gap:.6rem}
+.kibera-card .features svg{flex:0 0 16px;color:var(--accent-2)}
+.kibera-card .cta{margin-top:auto}
+.kibera-card .btn{width:100%;border-radius:12px;padding:.9rem;font-weight:700}
+.kibera-card.recommended{transform:translateY(-6px) scale(1.02);border:1.5px solid var(--green);box-shadow:0 28px 80px rgba(45,138,110,0.06)}
+.kibera-card .popular-badge{position:absolute;top:12px;right:12px;background:linear-gradient(90deg,var(--yellow),var(--accent-2));padding:6px 10px;border-radius:999px;font-weight:800;color:#0b1220;font-size:.78rem;box-shadow:var(--shadow-sm)}
+@media(max-width:700px){.kibera-pricing-grid{grid-template-columns:1fr}.kibera-card{padding:1rem;min-height:unset}}
 .urban-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02)), var(--card);
   border: 1.5px solid var(--border-light);
