@@ -16,6 +16,26 @@
   <link rel="stylesheet" href="assets/css/language-toggle.css">
   <link rel="stylesheet" href="assets/css/kibera.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <style>
+  /* Kibera pricing card styles (page-scoped) */
+  #packages .kibera-pricing-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));align-items:start;margin:0 auto;padding:1rem 0}
+  .kibera-card{background:#ffffff;border-radius:14px;padding:1.4rem;box-shadow:0 10px 30px rgba(12,20,28,0.06);border:1px solid rgba(15,23,30,0.04);position:relative;overflow:hidden;transition:transform .28s ease,box-shadow .28s ease}
+  .kibera-card:hover{transform:translateY(-8px);box-shadow:0 24px 50px rgba(12,20,28,0.12)}
+  .kibera-card .card-accent{height:8px;border-radius:8px 8px 0 0;margin:-1.4rem -1.4rem 1rem;background:linear-gradient(90deg,#2d8a6e,#2b9bdc);box-shadow:0 8px 24px rgba(45,138,110,0.08)}
+  .kibera-card .tier-name{font-size:1.15rem;font-weight:700;margin:0;color:#0f1724}
+  .kibera-card .tier-sub{display:block;font-size:.9rem;color:#64748b;margin-top:6px}
+  .kibera-card .price{font-size:1.6rem;font-weight:800;color:#0b1220;margin:0.6rem 0}
+  .kibera-card .features{list-style:none;padding:0;margin:0.6rem 0 1rem;color:#334155;display:grid;gap:.45rem}
+  .kibera-card .features li{display:flex;align-items:center;gap:.6rem}
+  .kibera-card .features svg{flex:0 0 18px;opacity:.9}
+  .kibera-card .cta{display:inline-flex;align-items:center;gap:.6rem;padding:.6rem 1rem;border-radius:10px;text-decoration:none}
+  .kibera-card.recommended{transform:translateY(-4px) scale(1.02);border:1px solid rgba(45,138,110,0.12);box-shadow:0 26px 60px rgba(45,138,110,0.06)}
+  .kibera-card .popular-badge{position:absolute;top:14px;right:14px;background:linear-gradient(90deg,#ffd54a,#ffb84d);padding:6px 10px;border-radius:999px;font-weight:800;color:#111;font-size:.78rem;box-shadow:0 10px 30px rgba(255,184,77,0.12)}
+  @media (max-width:700px){
+    #packages .kibera-pricing-grid{grid-template-columns:1fr}
+    .kibera-card{padding:1rem}
+  }
+  </style>
 </head>
 <body class="site-preload">
   <script src="assets/js/components.js"></script>
@@ -47,83 +67,69 @@
         <h2 style="color:#ffffff">Kibera Street Vibes - Packages</h2>
         <p class="muted" style="color:#ffffff">A modern, thoughtful look at Kibera's community, culture and unique experiences. Choose a package that fits you.</p>
       </div>
+      <script>
+      // Kibera package buttons: preselect tier in inline booking form and scroll to booking
+      (function(){
+        document.addEventListener('click', function(e){
+          const btn = e.target.closest && e.target.closest('.kibera-card .cta');
+          if(!btn) return;
+          const tier = btn.getAttribute('data-tier') || btn.closest('.kibera-card')?.getAttribute('data-tier');
+          const select = document.querySelector('#bookingTierKibera');
+          if(select && tier) select.value = tier;
+          const booking = document.getElementById('booking');
+          if(booking){
+            e.preventDefault && e.preventDefault();
+            booking.scrollIntoView({behavior:'smooth', block:'center'});
+          }
+        });
+      })();
+      </script>
     </section>
 
     <section id="packages" class="container packages">
-      <div class="packages-grid">
-        <!-- Pulse Circuit - Basic -->
-        <div class="urban-card">
-          <div class="urban-card-header">
-            <h3>Pulse Circuit <span class="badge">Basic</span></h3>
-            <p>Great for first-time explorers. The Basic package contains essential community experiences.</p>
-          </div>
-          <div class="urban-card-body">
-            <ul class="experience-list">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Kibera Roots Walk</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Taste the Streets</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Mural Pulse Tour</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Thrift &amp; Soko Walk</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Lens Street Photography</li>
+      <div class="kibera-pricing-grid" aria-label="Kibera pricing options">
+        <article class="kibera-card" data-tier="pulse_circuit" aria-labelledby="tier-pulse">
+          <div class="card-accent" style="background:linear-gradient(90deg,#e6fffa,#d1fae5)"></div>
+          <div class="card-body">
+            <h4 id="tier-pulse" class="tier-name">Pulse Circuit <span class="tier-sub">Basic</span></h4>
+            <p class="price"><span class="currency">$</span>170</p>
+            <ul class="features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Kibera Roots Walk</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Taste the Streets</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Mural Pulse Tour</li>
             </ul>
-            <div class="price-tag">
-              <span class="currency">$</span>
-              <span class="amount">170</span>
-            </div>
-            <button class="btn btn-primary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Book Pulse Circuit
-            </button>
+            <button type="button" class="btn btn-secondary cta" data-tier="pulse_circuit">Book Pulse Circuit</button>
           </div>
+        </article>
 
-        <!-- Urban Navigator - Standard -->
-        <div class="urban-card">
-          <div class="urban-card-header">
-            <h3>Urban Navigator <span class="badge">Standard</span></h3>
-            <p>(includes Pulse Circuit) Standard includes everything in Basic.</p>
-          </div>
-          <div class="urban-card-body">
-            <ul class="experience-list">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Urban Craft Collective</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Pulse Empowerment Circuit</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Ndudhi Moto Ride</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Street Art &amp; Graffiti Jam</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Local Hangout Vibes</li>
+        <article class="kibera-card recommended" data-tier="urban_navigator" aria-labelledby="tier-urban">
+          <div class="card-accent" style="background:linear-gradient(90deg,#2d8a6e,#2b9bdc)"></div>
+          <div class="popular-badge">Most Popular</div>
+          <div class="card-body">
+            <h4 id="tier-urban" class="tier-name">Urban Navigator <span class="tier-sub">Standard</span></h4>
+            <p class="price"><span class="currency">$</span>270</p>
+            <ul class="features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Includes Pulse Circuit experiences</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Urban Craft Collective</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Pulse Empowerment Circuit</li>
             </ul>
-            <div class="price-tag">
-              <span class="currency">$</span>
-              <span class="amount">270</span>
-            </div>
-            <button class="btn btn-secondary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Book Urban Navigator
-            </button>
+            <button type="button" class="btn btn-primary cta" data-tier="urban_navigator">Book Urban Navigator</button>
           </div>
+        </article>
 
-        <!-- Elite Horizon - Premium -->
-        <div class="urban-card">
-          <div class="urban-card-header">
-            <h3>Elite Horizon <span class="badge">Premium</span></h3>
-            <p>(exclusive experiences) Premium features are exclusive and not included in other packages.</p>
-          </div>
-          <div class="urban-card-body">
-            <ul class="experience-list">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Live Performance Showcase</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Mtaa Sports Connect</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Home-Route Community Visits</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Nganya Experience</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Creative Gallery Access</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Urban Agri-Tour</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Pulse Outreach Program</li>
+        <article class="kibera-card" data-tier="elite_horizon" aria-labelledby="tier-elite">
+          <div class="card-accent" style="background:linear-gradient(90deg,#6b21a8,#f97316)"></div>
+          <div class="card-body">
+            <h4 id="tier-elite" class="tier-name">Elite Horizon <span class="tier-sub">Premium</span></h4>
+            <p class="price"><span class="currency">$</span>450</p>
+            <ul class="features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Exclusive community experiences</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Live performance &amp; gallery access</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Home-route community visits</li>
             </ul>
-            <div class="price-tag">
-              <span class="currency">$</span>
-              <span class="amount">450</span>
-            </div>
-            <button class="btn btn-accent">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Book Elite Horizon
-            </button>
+            <button type="button" class="btn btn-accent cta" data-tier="elite_horizon">Book Elite Horizon</button>
           </div>
+        </article>
       </div>
 
       <div class="note-box">
