@@ -121,11 +121,9 @@ All 9 enhancements (7 core + 2 bonus features) have been successfully implemente
 **Contact Data:**
 ```json
 "contact": {
-   "whatsapp": "https://wa.link/743o72",
-   "telegram": "@urbanpulseadventures",
-   "phone": "+254712866733",
-   "email": "urbanpulseadventures254.org@gmail.com",
-   "instagram": "https://www.instagram.com/upadventures254"
+   "whatsapp": "+254712866733",
+   "whatsapp_link": "https://wa.link/743o72",
+   "telegram": "@urbanpulseadventures"
 }
 ```
 

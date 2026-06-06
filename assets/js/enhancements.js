@@ -199,7 +199,7 @@ const enhancements = (() => {
 
   // ===== WHATSAPP FLOATING BUTTON =====
   function initWhatsAppButton() {
-    const contactData = tourData.getTour('kibera')?.contact || { whatsapp: 'https://wa.link/743o72', telegram: '@urbanpulseadventures', phone: '+254712866733', email: 'urbanpulseadventures254.org@gmail.com', instagram: 'https://www.instagram.com/upadventures254' };
+    const contactData = tourData.getTour('kibera')?.contact || { whatsapp: '+254712866733', whatsapp_link: 'https://wa.link/743o72', telegram: '@urbanpulseadventures' };
 
     // Create floating button
     const button = document.createElement('button');
@@ -211,7 +211,7 @@ const enhancements = (() => {
       </svg>
       <div class="whatsapp-tooltip">Chat to Book</div>
       <div class="whatsapp-popover">
-        <a href="${generateWhatsAppLink(contactData.whatsapp, 'UrbanPulse Adventures')}" target="_blank" rel="noopener noreferrer">
+        <a href="${generateWhatsAppLink(contactData.whatsappLink || contactData.whatsapp_link || contactData.whatsapp, 'UrbanPulse Adventures')}" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.929 1.316c-.56.298-1.091.715-1.566 1.203-4.413 4.413-4.413 11.589 0 16.002 4.413 4.413 11.589 4.413 16.002 0 1.429-1.429 2.546-3.14 3.296-5.01.173-.465.34-1.024.493-1.596.36-1.39.26-2.933-.348-4.238a9.935 9.935 0 00-1.547-2.566c.025.02.051.04.076.061 4.413 4.414 4.413 11.59 0 16.003-4.413 4.413-11.589 4.413-16.002 0C2.347 21.432 2.347 14.256 6.76 9.843z"/></svg>
           WhatsApp
         </a>
@@ -237,13 +237,15 @@ const enhancements = (() => {
     });
   }
 
-  function generateWhatsAppLink(phoneOrUrl, message) {
-    if (!phoneOrUrl) return '#';
-    // If a full URL (wa.link / wa.me or other) is provided, use it directly
-    if (/^https?:\/\//i.test(phoneOrUrl)) return phoneOrUrl;
-    const encodedMessage = message ? `?text=${encodeURIComponent(message)}` : '';
-    const digits = phoneOrUrl.replace(/\D/g, '');
-    return `https://wa.me/${digits}${encodedMessage}`;
+  function generateWhatsAppLink(phoneOrLink, message) {
+    const encodedMessage = encodeURIComponent(message);
+    if (!phoneOrLink) return 'https://wa.link/743o72';
+    // If a full URL is provided (e.g., wa.link short URL), return it as-is
+    if (/^https?:\/\//i.test(phoneOrLink)) {
+      return phoneOrLink;
+    }
+    const digits = phoneOrLink.replace(/\D/g, '');
+    return `https://wa.me/${digits}?text=${encodedMessage}`;
   }
 
   // ===== AVAILABILITY CALENDAR =====

@@ -1,10 +1,11 @@
 {
   "contact": {
-    "whatsapp": "https://wa.link/743o72",
-    "telegram": "@urbanpulseadventures",
-    "phone": "+254712866733",
-    "email": "urbanpulseadventures254.org@gmail.com",
-    "instagram": "https://www.instagram.com/upadventures254"
+     "phone": "+254712866733",
+     "whatsapp": "+254712866733",
+     "whatsappLink": "https://wa.link/743o72",
+     "telegram": "@urbanpulseadventures",
+     "email": "urbanpulseadventures254.org@gmail.com",
+     "instagram": "https://www.instagram.com/upadventures254"
   },
   "tours": [
     {
