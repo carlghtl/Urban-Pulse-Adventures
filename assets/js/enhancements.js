@@ -652,7 +652,8 @@ const enhancements = (() => {
   function init() {
     tourData.loadTours().then(() => {
       initReviewDisplay();
-      initWhatsAppButton();
+      // Floating WhatsApp "Chat to Book" button disabled per request
+      // initWhatsAppButton();
       initAvailabilityCalendar();
       initWeatherWidget();
       initTourMaps();
