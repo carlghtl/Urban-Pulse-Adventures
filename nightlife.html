@@ -22,6 +22,8 @@
   <script src="assets/js/components.js"></script>
   <script>Components.renderLoader();</script>
 
+  <script src="assets/js/map-hero.js"></script>
+
   <a href="#main" class="skip-link">Skip to main content</a>
   <button class="back-to-top" aria-label="Back to top">&#8593;</button>
   <header class="site-header">
@@ -43,10 +45,12 @@
     </div>
   </header>
 <main id="main">
-    <section class="hero hero-sm packages-hero" aria-roledescription="banner">
-      <div class="container">
-        <h2 style="color:#ffffff">Nairobi Nightlife — After Dark</h2>
-        <p class="muted" style="color:#ffffff">From rooftop sunsets to underground beats — curated evenings of food, music, and city stories.</p>
+    <section class="hero hero-sm packages-hero map-hero" data-tour-id="nightlife" aria-roledescription="banner">
+      <div class="map-hero__container" id="map-hero-nightlife" aria-hidden="false"></div>
+      <div class="map-hero__overlay" role="region" aria-label="Nightlife tour summary">
+        <h2>Nairobi Nightlife — After Dark</h2>
+        <p class="muted">From rooftop sunsets to underground beats — curated evenings of food, music, and city stories.</p>
+        <a href="#activities" class="btn btn-primary">See Activities</a>
       </div>
     </section>
 

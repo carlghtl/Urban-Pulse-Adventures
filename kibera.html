@@ -15,11 +15,15 @@
   <link rel="stylesheet" href="assets/css/weather-toggle.css">
   <link rel="stylesheet" href="assets/css/language-toggle.css">
   <link rel="stylesheet" href="assets/css/kibera.css">
+  <link rel="stylesheet" href="assets/css/map-hero.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/map-hero.css">
 </head>
 <body class="site-preload">
   <script src="assets/js/components.js"></script>
   <script>Components.renderLoader();</script>
+
+  <script src="assets/js/map-hero.js"></script>
 
   <a href="#main" class="skip-link">Skip to main content</a>
   <button class="back-to-top" aria-label="Back to top">&#8593;</button>
@@ -42,10 +46,12 @@
     </div>
   </header>
 <main id="main">
-    <section class="hero hero-sm packages-hero">
-      <div class="container">
-        <h2 style="color:#ffffff">Kibera Street Vibes - Packages</h2>
-        <p class="muted" style="color:#ffffff">A modern, thoughtful look at Kibera's community, culture and unique experiences. Choose a package that fits you.</p>
+    <section class="hero hero-sm packages-hero map-hero" data-tour-id="kibera" aria-roledescription="banner">
+      <div class="map-hero__container" id="map-hero-kibera" aria-hidden="false"></div>
+      <div class="map-hero__overlay" role="region" aria-label="Kibera tour summary">
+        <h2>Kibera Street Vibes</h2>
+        <p class="muted">A modern, thoughtful look at Kibera's community, culture and unique experiences.</p>
+        <a href="#booking" class="btn btn-primary">Book Now</a>
       </div>
       <script>
       // Kibera package buttons: preselect tier in inline booking form and scroll to booking

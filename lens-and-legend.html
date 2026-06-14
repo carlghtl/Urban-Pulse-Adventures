@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="assets/css/weather-toggle.css">
   <link rel="stylesheet" href="assets/css/language-toggle.css">
   <link rel="stylesheet" href="assets/css/lens-and-legend.css">
+  <link rel="stylesheet" href="assets/css/map-hero.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body class="site-preload">
   <script src="assets/js/components.js"></script>
   <script>Components.renderLoader();</script>
+
+  <script src="assets/js/map-hero.js"></script>
 
   <a href="#main" class="skip-link">Skip to main content</a>
   <button class="back-to-top" aria-label="Back to top">&#8593;</button>
@@ -42,17 +45,17 @@
   </header>
 <main id="main">
     <!-- Hero Section -->
-    <section class="lens-hero">
+     <section class="hero hero-sm lens-hero map-hero" data-tour-id="lens-and-legend" aria-roledescription="banner">
       <div class="container hero-content">
         <div class="hero-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg>
           Photography Experience
         </div>
-        <h1 class="hero-title">Lens & Legends</h1>
-        <p class="hero-subtitle">Capture Nairobi's urban beauty with local storytellers. Perfect for photography enthusiasts.</p>
-        <div class="hero-actions">
-          <a href="#packages" class="btn btn-primary">Explore Packages</a>
-          <a href="#booking" class="btn btn-secondary">Book Now</a>
+        <div class="map-hero__container" id="map-hero-lens" aria-hidden="false"></div>
+        <div class="map-hero__overlay" role="region" aria-label="Lens and Legends summary">
+          <h2 style="color:#ffffff">Lens &amp; Legends</h2>
+          <p class="muted" style="color:#ffffff">Capture Nairobi's urban beauty with local storytellers and guides.</p>
+          <a href="#booking" class="btn btn-primary">Book a Session</a>
         </div>
       </div>
     </section>

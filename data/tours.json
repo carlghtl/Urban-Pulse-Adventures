@@ -27,6 +27,16 @@
         "lng": 36.7833
       },
       "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.792830267849!2d36.783353!3d-1.328783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f2f1234567890ab%3A0xabcdef1234567890!2sKibera%2C%20Nairobi!5e0!3m2!1sen!2sKE!4v1234567890",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.792830267849!2d36.783353!3d-1.328783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f2f1234567890ab%3A0xabcdef1234567890!2sKibera%2C%20Nairobi!5e0!3m2!1sen!2sKE!4v1234567890",
+      "map": {
+        "markers": [
+          {"lat": -1.3288, "lng": 36.7833, "title": "Kibera Community Hub", "description": "Meeting point and starting place", "thumb": "assets/images/image%208.jfif"},
+          {"lat": -1.3295, "lng": 36.7850, "title": "Mural Lane", "description": "Street art and murals by local artists"}
+        ],
+        "route": [[-1.3288,36.7833],[-1.3295,36.7850],[-1.3300,36.7860]],
+        "polygon": [],
+        "staticImage": "assets/images/image%208.jfif"
+      },
       "availability": {
         "2026-05": {
           "01": {"guide": "Samuel", "slots": 8},
@@ -188,6 +198,15 @@
         "lng": 36.8172
       },
       "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7!2d36.817!3d-1.286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f2f5678901234ab%3A0xabcdef5678901234!2sNairobi%20CBD!5e0!3m2!1sen!2sKE!4v5678901234",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7!2d36.817!3d-1.286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f2f5678901234ab%3A0xabcdef5678901234!2sNairobi%20CBD!5e0!3m2!1sen!2sKE!4v5678901234",
+      "map": {
+        "markers": [
+          {"lat": -1.2864, "lng": 36.8172, "title": "Nairobi CBD", "description": "Central Nairobi nightlife hubs"}
+        ],
+        "route": [],
+        "polygon": [],
+        "staticImage": "files/Night%201.jpg"
+      },
       "availability": {
         "2026-05": {
           "02": {"guide": "Kofi", "slots": 10},
@@ -328,6 +347,15 @@
         "lng": 36.8160
       },
       "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8!2d36.816!3d-1.278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f2f6!2d36.81!4v7891011121",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8!2d36.816!3d-1.278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f2f6!2d36.81!4v7891011121",
+      "map": {
+        "markers": [
+          {"lat": -1.2784, "lng": 36.8160, "title": "Lens & Legends Start", "description": "Meet your photography guide near the market", "thumb": "files/lens%201.jpg"}
+        ],
+        "route": [],
+        "polygon": [],
+        "staticImage": "files/lens%201.jpg"
+      },
       "availability": {
         "2026-05": {
           "01": {"guide": "Amara", "slots": 6},
@@ -465,6 +493,15 @@
         "lng": 36.7869
       },
       "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7!2d36.787!3d-1.295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f2f7!2d36.79!4v1213141516",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7!2d36.787!3d-1.295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f2f7!2d36.79!4v1213141516",
+      "map": {
+        "markers": [
+          {"lat": -1.2950, "lng": 36.7869, "title": "Seasoned Tours Gathering Point", "description": "Central meeting point for seasonal events"}
+        ],
+        "route": [],
+        "polygon": [],
+        "staticImage": "files/Seasoned%201.jpg"
+      },
       "availability": {
         "2026-05": {
           "02": {"guide": "Kamau", "slots": 12},
@@ -595,6 +632,16 @@
         "lng": 35.5
       },
       "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.5!2d35.5!3d-1.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f3d!2d35.5!4v1617181920",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.5!2d35.5!3d-1.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f3d!2d35.5!4v1617181920",
+      "map": {
+        "markers": [
+          {"lat": -1.5, "lng": 35.5, "title": "Wildlife Region Center", "description": "Approximate central point for multi-day safaris"},
+          {"lat": -1.406111, "lng": 35.011389, "title": "Masai Mara (example)", "description": "Representative marker for Mara area"}
+        ],
+        "route": [],
+        "polygon": [],
+        "staticImage": "files/wildlife%20thumb.jpg"
+      },
       "availability": {
         "2026-05": {
           "03": {"guide": "John", "slots": 6},
@@ -718,6 +765,16 @@
         "lng": 40.1969
       },
       "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.2!2d40.197!3d-3.717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184156!2d40.197!4v2122232425",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.2!2d40.197!3d-3.717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184156!2d40.197!4v2122232425",
+      "map": {
+        "markers": [
+          {"lat": -1.319167, "lng": 36.927778, "title": "Jomo Kenyatta Intl Airport (JKIA)", "description": "Common pickup/dropoff point"},
+          {"lat": -3.7167, "lng": 40.1969, "title": "Transfer Service Area (coordinate provided)", "description": "Service area as listed in package data"}
+        ],
+        "route": [],
+        "polygon": [],
+        "staticImage": "assets/images/logo%201.png"
+      },
       "availability": {
         "2026-05": {
           "01": {"guide": "James", "slots": 20},

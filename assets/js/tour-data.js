@@ -81,10 +81,12 @@ const tourData = (() => {
   }
 
   function formatPrice(price, currency = 'USD') {
-    const locale = currency === 'USD' ? 'en-US' : (currency === 'KES' ? 'en-KE' : 'en-US');
+    // Default currency is USD across the site
+    const useCurrency = currency || 'USD';
+    const locale = useCurrency === 'USD' ? 'en-US' : (useCurrency === 'KES' ? 'en-KE' : 'en-US');
     return new Intl.NumberFormat(locale, {
       style: 'currency',
-      currency: currency,
+      currency: useCurrency,
       minimumFractionDigits: 0
     }).format(price);
   }

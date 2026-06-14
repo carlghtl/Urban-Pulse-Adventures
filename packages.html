@@ -36,6 +36,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/map-hero.css">
   <link rel="stylesheet" href="assets/css/packages.css">
   <link rel="stylesheet" href="assets/css/enhancements.css">
   <link rel="stylesheet" href="assets/css/weather-toggle.css">
@@ -45,6 +46,8 @@
 <body class="site-preload">
   <script src="assets/js/components.js"></script>
   <script>Components.renderLoader();</script>
+
+  <script src="assets/js/map-hero.js"></script>
 
   <a href="#main" class="skip-link">Skip to main content</a>
   <button class="back-to-top" aria-label="Back to top">&#8593;</button>
@@ -67,8 +70,9 @@
     </div>
   </header>
 <main id="main">
-    <section class="hero hero-sm packages-hero">
-      <div class="container">
+    <section class="hero hero-sm packages-hero map-hero" aria-roledescription="banner">
+      <div class="map-hero__container" id="map-hero-packages" aria-hidden="false"></div>
+      <div class="map-hero__overlay" role="region" aria-label="Packages summary">
         <h2 class="neon-text">Tour Packages</h2>
         <p class="muted">Curated urban adventures for every traveler. <span class="urban-highlight">Modern. Creative. Unforgettable.</span></p>
       </div>

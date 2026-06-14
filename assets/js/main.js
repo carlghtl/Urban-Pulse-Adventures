@@ -985,6 +985,8 @@
     initComingSoon();
     initCardBackgrounds();
     initGallery();
+    // initialize map hero module if present
+    try { if (window.MapHero && typeof MapHero.init === 'function') MapHero.init(); } catch (e) { console.warn('MapHero init failed', e); }
       // Ensure CSS variable for header height is set so hero can size correctly below the nav.
       (function setSiteHeaderHeightVar(){
         function updateHeaderHeight(){

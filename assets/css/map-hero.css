@@ -1,0 +1,9 @@
+.map-hero{position:relative;display:block;overflow:hidden}
+.map-hero__container{width:100%;height:420px;background:#f3f3f3}
+.map-hero__overlay{position:absolute;left:1.25rem;top:1.25rem;z-index:30;color:#fff;backdrop-filter:blur(6px);background:rgba(0,0,0,0.35);padding:0.75rem 1rem;border-radius:8px}
+.map-hero__overlay h1,.map-hero__overlay h2{margin:0;color:#fff}
+.map-hero__overlay p{margin:0.25rem 0 0;font-size:0.95rem;color:#fff}
+.map-hero__overlay .btn{margin-top:0.5rem}
+.map-hero img{width:100%;height:100%;object-fit:cover}
+.map-embed-wrap{width:100%;height:100%}
+@media (min-width:900px){.map-hero__container{height:560px}}

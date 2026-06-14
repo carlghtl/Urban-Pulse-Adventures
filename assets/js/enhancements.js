@@ -193,6 +193,9 @@ const enhancements = (() => {
       maxInput.value = roundedMax;
       updateFilter();
     });
+
+    // initialize map hero if present
+    try{ if(window.MapHero && typeof MapHero.init === 'function') MapHero.init(); } catch(e) { console.warn('MapHero init error', e); }
   }
 
   // ===== WHATSAPP FLOATING BUTTON =====
@@ -241,6 +244,11 @@ const enhancements = (() => {
       </div>
       <div class="guide-badge" id="guideBadge" style="display:none;"></div>
     `;
+
+    // Also initialize map hero if present (safe to call repeatedly)
+    try{
+      if(window.MapHero && typeof MapHero.init === 'function') MapHero.init();
+    }catch(e){console.warn('MapHero init error', e);}
 
     // Insert after tour select
     tourSelect.parentNode.insertBefore(calendarWidget, tourSelect.nextSibling);
