@@ -119,11 +119,10 @@ const enhancements = (() => {
     const prices = tours.map(t => t.basePrice);
     const minPrice = Math.min(...prices);
     const maxPrice = Math.max(...prices);
-    // Use USD-friendly rounding (50 USD steps)
-    const roundedMin = Math.floor(minPrice / 50) * 50;
-    const roundedMax = Math.ceil(maxPrice / 50) * 50;
+    const roundedMin = Math.floor(minPrice / 1000) * 1000;
+    const roundedMax = Math.ceil(maxPrice / 1000) * 1000;
 
-    // Create filter section
+    // Create filter section (prices displayed in USD)
     const filterSection = document.createElement('div');
     filterSection.className = 'price-filter-section';
     filterSection.innerHTML = `
@@ -132,15 +131,15 @@ const enhancements = (() => {
         <div class="slider-inputs">
           <div class="slider-input-group">
             <label>Min Price (USD)</label>
-            <input type="range" id="minPrice" min="${roundedMin}" max="${roundedMax}" value="${roundedMin}" step="5">
+            <input type="range" id="minPrice" min="${roundedMin}" max="${roundedMax}" value="${roundedMin}" step="500">
           </div>
           <div class="slider-input-group">
             <label>Max Price (USD)</label>
-            <input type="range" id="maxPrice" min="${roundedMin}" max="${roundedMax}" value="${roundedMax}" step="5">
+            <input type="range" id="maxPrice" min="${roundedMin}" max="${roundedMax}" value="${roundedMax}" step="500">
           </div>
         </div>
         <div class="slider-display">
-          <span>$ <strong id="minDisplay">${roundedMin.toLocaleString()}</strong> — $ <strong id="maxDisplay">${roundedMax.toLocaleString()}</strong></span>
+          <span id="priceRangeDisplay">${tourData.formatPrice(roundedMin)} — ${tourData.formatPrice(roundedMax)}</span>
           <button class="slider-reset-btn btn btn-ghost">Reset Filter</button>
         </div>
         <div class="tours-count"><strong id="toursCount">6</strong> of 6 tours shown</div>
@@ -152,8 +151,7 @@ const enhancements = (() => {
     const minInput = filterSection.querySelector('#minPrice');
     const maxInput = filterSection.querySelector('#maxPrice');
     const resetBtn = filterSection.querySelector('.slider-reset-btn');
-    const minDisplay = filterSection.querySelector('#minDisplay');
-    const maxDisplay = filterSection.querySelector('#maxDisplay');
+    const priceRangeDisplay = filterSection.querySelector('#priceRangeDisplay');
     const toursCount = filterSection.querySelector('#toursCount');
 
     function updateFilter() {
@@ -166,8 +164,7 @@ const enhancements = (() => {
         return;
       }
 
-      minDisplay.textContent = minVal.toLocaleString();
-      maxDisplay.textContent = maxVal.toLocaleString();
+      priceRangeDisplay.textContent = `${tourData.formatPrice(minVal)} — ${tourData.formatPrice(maxVal)}`;
 
       // Filter cards
       const allCards = container.querySelectorAll('.card');
@@ -198,7 +195,10 @@ const enhancements = (() => {
     });
   }
 
-  // WhatsApp floating button removed per request
+  // ===== WHATSAPP FLOATING BUTTON =====
+  function initWhatsAppButton() {
+    // WhatsApp floating button intentionally removed per request
+  }
 
   function generateWhatsAppLink(phoneOrLink, message) {
     const encodedMessage = encodeURIComponent(message);
@@ -385,7 +385,7 @@ const enhancements = (() => {
                   <input type="checkbox" value="${activity.id}" data-price="${activity.price}">
                   <span class="activity-label">
                     <span>${activity.name}</span>
-                    ${activity.price > 0 ? `<span class="activity-price">+${tourData.formatPrice(activity.price)}</span>` : ''}
+                    ${activity.price > 0 ? `<span class="activity-price">${tourData.formatPrice(activity.price, tour.currency || 'USD') ? tourData.formatPrice(activity.price, tour.currency || 'USD') : '$' + activity.price : ''}</span>` : ''}
                   </span>
                 </label>
               `).join('')}
@@ -615,7 +615,8 @@ const enhancements = (() => {
   function init() {
     tourData.loadTours().then(() => {
       initReviewDisplay();
-      // Floating WhatsApp button removed per request
+      // Floating WhatsApp "Chat to Book" button disabled per request
+      // initWhatsAppButton();
       initAvailabilityCalendar();
       initWeatherWidget();
       initTourMaps();
@@ -634,6 +635,7 @@ const enhancements = (() => {
     init,
     initReviewDisplay,
     initPriceSlider,
+    initWhatsAppButton,
     initAvailabilityCalendar,
     initWeatherWidget,
     initTourMaps

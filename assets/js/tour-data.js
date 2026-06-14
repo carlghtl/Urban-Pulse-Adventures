@@ -80,11 +80,11 @@ const tourData = (() => {
     return toursCache.reduce((sum, t) => sum + (t.reviewStats?.totalReviews || 0), 0);
   }
 
-  function formatPrice(price) {
-    // Default to USD formatting site-wide
-    return new Intl.NumberFormat('en-US', {
+  function formatPrice(price, currency = 'USD') {
+    const locale = currency === 'USD' ? 'en-US' : (currency === 'KES' ? 'en-KE' : 'en-US');
+    return new Intl.NumberFormat(locale, {
       style: 'currency',
-      currency: 'USD',
+      currency: currency,
       minimumFractionDigits: 0
     }).format(price);
   }

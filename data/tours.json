@@ -1,12 +1,12 @@
 {
-    "contact": {
-      "phone": "+254712866733",
-      "whatsapp": "+254712866733",
-      "whatsappLink": "https://wa.link/743o72",
-      "telegram": "@urbanpulseadventures",
-      "email": "urbanpulseadventures254.org@gmail.com",
-      "instagram": "https://www.instagram.com/upadventures254"
-    },
+  "contact": {
+     "phone": "+254712866733",
+     "whatsapp": "+254712866733",
+     "whatsappLink": "https://wa.link/743o72",
+     "telegram": "@urbanpulseadventures",
+     "email": "urbanpulseadventures254.org@gmail.com",
+     "instagram": "https://www.instagram.com/upadventures254"
+  },
   "tours": [
     {
       "id": "kibera",
@@ -14,8 +14,8 @@
       "shortDesc": "Explore Nairobi's vibrant community and street culture",
       "fullDesc": "Experience the authentic heartbeat of Nairobi through the eyes of local guides. Walk through Kibera's colorful streets, meet community leaders, and discover how local initiatives are transforming neighborhoods. This immersive tour celebrates resilience, creativity, and the vibrant street culture that defines urban Nairobi.",
       "image": "assets/images/image%208.jfif",
-      "basePrice": 39,
-      "currency": "USD",
+      "basePrice": 5500,
+      "currency": "KES",
       "duration": "3 hours",
       "groupSize": "2-10 people",
       "guides": [
@@ -59,8 +59,8 @@
         "activities": [
           {"id": "street-art", "name": "Street Art Walking Tour", "price": 0},
           {"id": "market", "name": "Local Market Visit", "price": 0},
-          {"id": "lunch", "name": "Home Stay Lunch", "price": 11},
-          {"id": "photo", "name": "Photography Session", "price": 14}
+          {"id": "lunch", "name": "Home Stay Lunch", "price": 1500},
+          {"id": "photo", "name": "Photography Session", "price": 2000}
         ],
         "durations": [
           {"label": "2 hours", "multiplier": 0.8},
@@ -223,8 +223,8 @@
         "activities": [
           {"id": "live-music", "name": "Live Music Venues", "price": 0},
           {"id": "food-street", "name": "Food Street Experience", "price": 0},
-          {"id": "cocktails", "name": "Craft Cocktail Class", "price": 9},
-          {"id": "rooftop", "name": "Rooftop Bar Hopping", "price": 11}
+          {"id": "cocktails", "name": "Craft Cocktail Class", "price": 1200},
+          {"id": "rooftop", "name": "Rooftop Bar Hopping", "price": 1500}
         ],
         "durations": [
           {"label": "3 hours", "multiplier": 0.85},
@@ -360,8 +360,8 @@
         "activities": [
           {"id": "street-art", "name": "Street Art Photography", "price": 0},
           {"id": "architecture", "name": "Architectural Tour", "price": 0},
-          {"id": "portrait", "name": "Portrait Photography Class", "price": 13},
-          {"id": "editing", "name": "Post-Processing Workshop", "price": 16}
+          {"id": "portrait", "name": "Portrait Photography Class", "price": 1800},
+          {"id": "editing", "name": "Post-Processing Workshop", "price": 2200}
         ],
         "durations": [
           {"label": "2.5 hours", "multiplier": 0.8},
@@ -490,8 +490,8 @@
         "activities": [
           {"id": "watch-party", "name": "FIFA/Sports Watch Party", "price": 0},
           {"id": "celebration", "name": "Special Event Celebration", "price": 0},
-          {"id": "stargazing", "name": "Star Gazing Night", "price": 7},
-          {"id": "festival", "name": "Local Festival Experience", "price": 9}
+          {"id": "stargazing", "name": "Star Gazing Night", "price": 1000},
+          {"id": "festival", "name": "Local Festival Experience", "price": 1200}
         ],
         "durations": [
           {"label": "3 hours", "multiplier": 0.85},
@@ -613,8 +613,8 @@
         "activities": [
           {"id": "big-five", "name": "Big Five Safari", "price": 0},
           {"id": "elephant", "name": "Elephant Encounter (Amboseli)", "price": 0},
-          {"id": "photography", "name": "Wildlife Photography", "price": 18},
-          {"id": "camping", "name": "Overnight Safari Camping", "price": 21}
+          {"id": "photography", "name": "Wildlife Photography", "price": 2500},
+          {"id": "camping", "name": "Overnight Safari Camping", "price": 3000}
         ],
         "durations": [
           {"label": "1 day", "multiplier": 0.7},
@@ -773,8 +773,8 @@
       "customization": {
         "activities": [
           {"id": "basic", "name": "Basic Transfer (JKIA to Hotel)", "price": 0},
-          {"id": "city-tour", "name": "Quick City Orientation", "price": 11},
-          {"id": "welcome-pack", "name": "Welcome Pack (SIM, tips, info)", "price": 6}
+          {"id": "city-tour", "name": "Quick City Orientation", "price": 1500},
+          {"id": "welcome-pack", "name": "Welcome Pack (SIM, tips, info)", "price": 800}
         ],
         "durations": [
           {"label": "1 hour", "multiplier": 0.9},
