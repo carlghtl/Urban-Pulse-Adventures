@@ -46,31 +46,26 @@
     </div>
   </header>
 <main id="main">
-    <section class="hero hero-sm packages-hero map-hero" data-tour-id="kibera" aria-roledescription="banner">
+    <section class="tour-map-hero map-hero" data-tour-id="kibera" aria-roledescription="banner">
       <div class="map-hero__container" id="map-hero-kibera" aria-hidden="false"></div>
-      <div class="map-hero__overlay" role="region" aria-label="Kibera tour summary">
-        <h2>Kibera Street Vibes</h2>
-        <p class="muted">A modern, thoughtful look at Kibera's community, culture and unique experiences.</p>
-        <a href="#booking" class="btn btn-primary">Book Now</a>
-      </div>
-      <script>
-      // Kibera package buttons: preselect tier in inline booking form and scroll to booking
-      (function(){
-        document.addEventListener('click', function(e){
-          const btn = e.target.closest && e.target.closest('.kibera-card .cta');
-          if(!btn) return;
-          const tier = btn.getAttribute('data-tier') || btn.closest('.kibera-card')?.getAttribute('data-tier');
-          const select = document.querySelector('#bookingTierKibera');
-          if(select && tier) select.value = tier;
-          const booking = document.getElementById('booking');
-          if(booking){
-            e.preventDefault && e.preventDefault();
-            booking.scrollIntoView({behavior:'smooth', block:'center'});
-          }
-        });
-      })();
-      </script>
     </section>
+    <script>
+    // Kibera package buttons: preselect tier in inline booking form and scroll to booking
+    (function(){
+      document.addEventListener('click', function(e){
+        const btn = e.target.closest && e.target.closest('.kibera-card .cta');
+        if(!btn) return;
+        const tier = btn.getAttribute('data-tier') || btn.closest('.kibera-card')?.getAttribute('data-tier');
+        const select = document.querySelector('#bookingTierKibera');
+        if(select && tier) select.value = tier;
+        const booking = document.getElementById('booking');
+        if(booking){
+          e.preventDefault && e.preventDefault();
+          booking.scrollIntoView({behavior:'smooth', block:'center'});
+        }
+      });
+    })();
+    </script>
 
     <section id="packages" class="container packages">
       <div class="kibera-pricing-grid" aria-label="Kibera pricing options">
