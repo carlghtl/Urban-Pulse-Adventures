@@ -119,8 +119,9 @@ const enhancements = (() => {
     const prices = tours.map(t => t.basePrice);
     const minPrice = Math.min(...prices);
     const maxPrice = Math.max(...prices);
-    const roundedMin = Math.floor(minPrice / 1000) * 1000;
-    const roundedMax = Math.ceil(maxPrice / 1000) * 1000;
+    // Use USD-friendly rounding (50 USD steps)
+    const roundedMin = Math.floor(minPrice / 50) * 50;
+    const roundedMax = Math.ceil(maxPrice / 50) * 50;
 
     // Create filter section
     const filterSection = document.createElement('div');
@@ -130,16 +131,16 @@ const enhancements = (() => {
       <div class="price-slider-container">
         <div class="slider-inputs">
           <div class="slider-input-group">
-            <label>Min Price (KES)</label>
-            <input type="range" id="minPrice" min="${roundedMin}" max="${roundedMax}" value="${roundedMin}" step="500">
+            <label>Min Price (USD)</label>
+            <input type="range" id="minPrice" min="${roundedMin}" max="${roundedMax}" value="${roundedMin}" step="5">
           </div>
           <div class="slider-input-group">
-            <label>Max Price (KES)</label>
-            <input type="range" id="maxPrice" min="${roundedMin}" max="${roundedMax}" value="${roundedMax}" step="500">
+            <label>Max Price (USD)</label>
+            <input type="range" id="maxPrice" min="${roundedMin}" max="${roundedMax}" value="${roundedMax}" step="5">
           </div>
         </div>
         <div class="slider-display">
-          <span>KES <strong id="minDisplay">${roundedMin.toLocaleString()}</strong> — KES <strong id="maxDisplay">${roundedMax.toLocaleString()}</strong></span>
+          <span>$ <strong id="minDisplay">${roundedMin.toLocaleString()}</strong> — $ <strong id="maxDisplay">${roundedMax.toLocaleString()}</strong></span>
           <button class="slider-reset-btn btn btn-ghost">Reset Filter</button>
         </div>
         <div class="tours-count"><strong id="toursCount">6</strong> of 6 tours shown</div>
@@ -197,45 +198,7 @@ const enhancements = (() => {
     });
   }
 
-  // ===== WHATSAPP FLOATING BUTTON =====
-  function initWhatsAppButton() {
-    const contactData = tourData.getTour('kibera')?.contact || { whatsapp: '+254712866733', whatsapp_link: 'https://wa.link/743o72', telegram: '@urbanpulseadventures' };
-
-    // Create floating button
-    const button = document.createElement('button');
-    button.className = 'whatsapp-floating-btn';
-    button.setAttribute('aria-label', 'Chat to book');
-    button.innerHTML = `
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.929 1.316c-.56.298-1.091.715-1.566 1.203-4.413 4.413-4.413 11.589 0 16.002 4.413 4.413 11.589 4.413 16.002 0 1.429-1.429 2.546-3.14 3.296-5.01.173-.465.34-1.024.493-1.596.36-1.39.26-2.933-.348-4.238a9.935 9.935 0 00-1.547-2.566c.025.02.051.04.076.061 4.413 4.414 4.413 11.59 0 16.003-4.413 4.413-11.589 4.413-16.002 0C2.347 21.432 2.347 14.256 6.76 9.843z"/>
-      </svg>
-      <div class="whatsapp-tooltip">Chat to Book</div>
-      <div class="whatsapp-popover">
-        <a href="${generateWhatsAppLink(contactData.whatsappLink || contactData.whatsapp_link || contactData.whatsapp, 'UrbanPulse Adventures')}" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.929 1.316c-.56.298-1.091.715-1.566 1.203-4.413 4.413-4.413 11.589 0 16.002 4.413 4.413 11.589 4.413 16.002 0 1.429-1.429 2.546-3.14 3.296-5.01.173-.465.34-1.024.493-1.596.36-1.39.26-2.933-.348-4.238a9.935 9.935 0 00-1.547-2.566c.025.02.051.04.076.061 4.413 4.414 4.413 11.59 0 16.003-4.413 4.413-11.589 4.413-16.002 0C2.347 21.432 2.347 14.256 6.76 9.843z"/></svg>
-          WhatsApp
-        </a>
-        <a href="https://t.me/${contactData.telegram.replace('@', '')}" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
-          Telegram
-        </a>
-      </div>
-    `;
-
-    document.body.appendChild(button);
-
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      button.classList.toggle('active');
-    });
-
-    // Close on document click
-    document.addEventListener('click', (e) => {
-      if (!button.contains(e.target) && button.classList.contains('active')) {
-        button.classList.remove('active');
-      }
-    });
-  }
+  // WhatsApp floating button removed per request
 
   function generateWhatsAppLink(phoneOrLink, message) {
     const encodedMessage = encodeURIComponent(message);
@@ -422,7 +385,7 @@ const enhancements = (() => {
                   <input type="checkbox" value="${activity.id}" data-price="${activity.price}">
                   <span class="activity-label">
                     <span>${activity.name}</span>
-                    ${activity.price > 0 ? `<span class="activity-price">+KES ${activity.price}</span>` : ''}
+                    ${activity.price > 0 ? `<span class="activity-price">+${tourData.formatPrice(activity.price)}</span>` : ''}
                   </span>
                 </label>
               `).join('')}
@@ -652,8 +615,7 @@ const enhancements = (() => {
   function init() {
     tourData.loadTours().then(() => {
       initReviewDisplay();
-      // Floating WhatsApp "Chat to Book" button disabled per request
-      // initWhatsAppButton();
+      // Floating WhatsApp button removed per request
       initAvailabilityCalendar();
       initWeatherWidget();
       initTourMaps();
@@ -672,7 +634,6 @@ const enhancements = (() => {
     init,
     initReviewDisplay,
     initPriceSlider,
-    initWhatsAppButton,
     initAvailabilityCalendar,
     initWeatherWidget,
     initTourMaps

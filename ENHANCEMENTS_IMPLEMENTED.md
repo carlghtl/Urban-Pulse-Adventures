@@ -100,23 +100,18 @@ All 9 enhancements (7 core + 2 bonus features) have been successfully implemente
 ## 4. 💬 WhatsApp/Telegram Quick Booking ✅
 
 **What's New:**
-- Green WhatsApp floating button fixed on bottom-right (always visible)
-- Hover shows "Chat to Book" tooltip
-- Click opens popover with WhatsApp and Telegram links
-- Pre-filled messages with tour information
-- Works on all pages
+- Quick booking via WhatsApp and Telegram links (contact page)
+- Floating "Chat to Book" button removed from site per preference
 
 **Implementation Details:**
-- File: `enhancements.js` → `initWhatsAppButton()`
-- Data: `tours.json` contains WhatsApp and Telegram contacts
-- Button uses WhatsApp web API: `https://wa.me/{phone}?text={message}`
+- Contact links are available in `contact.html` and `data/tours.json`
+- WhatsApp uses web API: `https://wa.me/{phone}?text={message}`
 - Telegram link format: `https://t.me/{handle}`
 
 **Try It:**
-1. Look for green WhatsApp button on bottom-right of screen
-2. Hover over it to see "Chat to Book" tooltip
-3. Click to see WhatsApp and Telegram options
-4. Click either option to open chat in new tab
+1. Visit the Contact page for WhatsApp/Telegram links
+2. Click the link to open chat in a new tab
+3. Pre-filled messages include tour name when applicable
 
 **Contact Data:**
 ```json
@@ -133,7 +128,7 @@ All 9 enhancements (7 core + 2 bonus features) have been successfully implemente
 
 **What's New:**
 - Range slider filter on packages.html
-- Filter tours by KES 0 - 20,000+ price range
+- Filter tours by USD $0 - $2,000+ price range
 - Real-time card filtering as you drag slider
 - Shows "Showing X of 6 tours"
 - Reset button clears filter
@@ -155,12 +150,12 @@ All 9 enhancements (7 core + 2 bonus features) have been successfully implemente
 6. Click "Reset Filter" to clear
 
 **Price Ranges in Data:**
-- Airport Transfers: KES 3,500
-- Kibera: KES 5,500
-- Nightlife: KES 8,000
-- Photography: KES 6,500
-- Seasoned Tours: KES 7,500
-- Wildlife Safari: KES 18,000
+- Canonical prices are stored in `data/tours.json` using USD as the site default. Example values:
+   - Nightlife: $142
+   - Lens & Legends: $675
+   - Seasoned Tours: $690
+   - Wildlife Safari: $657
+   - Airport Transfers: $231
 
 ---
 
@@ -371,7 +366,7 @@ Next 3 Hours: Hourly temps at 1h, 2h, 3h
 ## 🎯 Key Features
 
 ### Data Structure
-- ✅ All tours standardized to KES pricing
+- ✅ All tours standardized to USD pricing
 - ✅ Reviews with author, location, rating, text, date
 - ✅ Availability by month with guide assignments
 - ✅ Customization options with price modifiers
@@ -426,7 +421,7 @@ Next 3 Hours: Hourly temps at 1h, 2h, 3h
 - [ ] ⭐ Star ratings visible on all tour cards
 - [ ] 💬 "Read Reviews" shows modal with reviews
 - [ ] 💰 Price slider on packages.html filters cards
-- [ ] 💬 WhatsApp button appears bottom-right
+- [ ] 💬 WhatsApp floating button removed (contact links available)
 - [ ] 📅 Calendar shows available dates when tour selected
 - [ ] ⛅ Weather appears when date selected in booking
 - [ ] 🎨 "Customize" button opens customizer modal

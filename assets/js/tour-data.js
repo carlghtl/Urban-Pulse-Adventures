@@ -81,9 +81,10 @@ const tourData = (() => {
   }
 
   function formatPrice(price) {
-    return new Intl.NumberFormat('en-KE', {
+    // Default to USD formatting site-wide
+    return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'KES',
+      currency: 'USD',
       minimumFractionDigits: 0
     }).format(price);
   }

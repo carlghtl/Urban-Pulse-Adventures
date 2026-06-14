@@ -1,12 +1,12 @@
 {
-  "contact": {
-     "phone": "+254712866733",
-     "whatsapp": "+254712866733",
-     "whatsappLink": "https://wa.link/743o72",
-     "telegram": "@urbanpulseadventures",
-     "email": "urbanpulseadventures254.org@gmail.com",
-     "instagram": "https://www.instagram.com/upadventures254"
-  },
+    "contact": {
+      "phone": "+254712866733",
+      "whatsapp": "+254712866733",
+      "whatsappLink": "https://wa.link/743o72",
+      "telegram": "@urbanpulseadventures",
+      "email": "urbanpulseadventures254.org@gmail.com",
+      "instagram": "https://www.instagram.com/upadventures254"
+    },
   "tours": [
     {
       "id": "kibera",
@@ -14,8 +14,8 @@
       "shortDesc": "Explore Nairobi's vibrant community and street culture",
       "fullDesc": "Experience the authentic heartbeat of Nairobi through the eyes of local guides. Walk through Kibera's colorful streets, meet community leaders, and discover how local initiatives are transforming neighborhoods. This immersive tour celebrates resilience, creativity, and the vibrant street culture that defines urban Nairobi.",
       "image": "assets/images/image%208.jfif",
-      "basePrice": 5500,
-      "currency": "KES",
+      "basePrice": 39,
+      "currency": "USD",
       "duration": "3 hours",
       "groupSize": "2-10 people",
       "guides": [
@@ -59,8 +59,8 @@
         "activities": [
           {"id": "street-art", "name": "Street Art Walking Tour", "price": 0},
           {"id": "market", "name": "Local Market Visit", "price": 0},
-          {"id": "lunch", "name": "Home Stay Lunch", "price": 1500},
-          {"id": "photo", "name": "Photography Session", "price": 2000}
+          {"id": "lunch", "name": "Home Stay Lunch", "price": 11},
+          {"id": "photo", "name": "Photography Session", "price": 14}
         ],
         "durations": [
           {"label": "2 hours", "multiplier": 0.8},
@@ -175,8 +175,8 @@
       "shortDesc": "Discover Nairobi's after-dark culture — live music, food streets, and vibrant local scenes",
       "fullDesc": "Experience Nairobi's electrifying nightlife! From live music venues in South C to the best food streets in Eastleigh, discover where locals go for authentic entertainment. Visit rooftop bars, underground music lounges, and hidden food gems. This is Nairobi after sunset — electric, diverse, and unforgettable.",
       "image": "files/Night%201.jpg",
-      "basePrice": 8000,
-      "currency": "KES",
+      "basePrice": 142,
+      "currency": "USD",
       "duration": "4 hours",
       "groupSize": "3-12 people",
       "guides": [
@@ -223,8 +223,8 @@
         "activities": [
           {"id": "live-music", "name": "Live Music Venues", "price": 0},
           {"id": "food-street", "name": "Food Street Experience", "price": 0},
-          {"id": "cocktails", "name": "Craft Cocktail Class", "price": 1200},
-          {"id": "rooftop", "name": "Rooftop Bar Hopping", "price": 1500}
+          {"id": "cocktails", "name": "Craft Cocktail Class", "price": 9},
+          {"id": "rooftop", "name": "Rooftop Bar Hopping", "price": 11}
         ],
         "durations": [
           {"label": "3 hours", "multiplier": 0.85},
@@ -315,8 +315,8 @@
       "shortDesc": "Capture Nairobi's urban beauty with local storytellers and guides",
       "fullDesc": "Perfect for photographers and visual storytellers! Explore Nairobi's most photogenic locations through the lens of professional guides. Learn composition, local stories behind iconic spots, and capture authentic moments. Walk through vibrant street art, architectural gems, and candid street photography opportunities.",
       "image": "files/lens%201.jpg",
-      "basePrice": 6500,
-      "currency": "KES",
+      "basePrice": 675,
+      "currency": "USD",
       "duration": "3.5 hours",
       "groupSize": "2-8 people",
       "guides": [
@@ -360,8 +360,8 @@
         "activities": [
           {"id": "street-art", "name": "Street Art Photography", "price": 0},
           {"id": "architecture", "name": "Architectural Tour", "price": 0},
-          {"id": "portrait", "name": "Portrait Photography Class", "price": 1800},
-          {"id": "editing", "name": "Post-Processing Workshop", "price": 2200}
+          {"id": "portrait", "name": "Portrait Photography Class", "price": 13},
+          {"id": "editing", "name": "Post-Processing Workshop", "price": 16}
         ],
         "durations": [
           {"label": "2.5 hours", "multiplier": 0.8},
@@ -452,8 +452,8 @@
       "shortDesc": "Experience world events in Nairobi — special celebrations, watch parties, and seasonal adventures",
       "fullDesc": "Connect with global events while experiencing authentic Nairobi! Join fellow travelers for Valentine's celebrations, FIFA World Cup watch parties, star gazing nights, and seasonal festivals. Each tour is uniquely timed to major world events, offering both cultural immersion and shared adventure.",
       "image": "files/Seasoned%201.jpg",
-      "basePrice": 7500,
-      "currency": "KES",
+      "basePrice": 690,
+      "currency": "USD",
       "duration": "4-5 hours",
       "groupSize": "4-15 people",
       "guides": [
@@ -490,8 +490,8 @@
         "activities": [
           {"id": "watch-party", "name": "FIFA/Sports Watch Party", "price": 0},
           {"id": "celebration", "name": "Special Event Celebration", "price": 0},
-          {"id": "stargazing", "name": "Star Gazing Night", "price": 1000},
-          {"id": "festival", "name": "Local Festival Experience", "price": 1200}
+          {"id": "stargazing", "name": "Star Gazing Night", "price": 7},
+          {"id": "festival", "name": "Local Festival Experience", "price": 9}
         ],
         "durations": [
           {"label": "3 hours", "multiplier": 0.85},
@@ -582,8 +582,8 @@
       "shortDesc": "Experience Kenya's iconic wildlife — Big Five in Masai Mara, Mount Kilimanjaro views in Amboseli",
       "fullDesc": "Venture beyond Nairobi to witness Kenya's legendary wildlife! Spot the Big Five in Masai Mara's vast savannas, experience Amboseli's elephant herds with Kilimanjaro backdrop, or explore other iconic wildlife reserves. Led by expert naturalists, this immersive safari combines thrilling wildlife encounters with cultural experiences.",
       "image": "files/wildlife.mp4",
-      "basePrice": 18000,
-      "currency": "KES",
+      "basePrice": 657,
+      "currency": "USD",
       "duration": "2-3 days",
       "groupSize": "2-8 people",
       "guides": [
@@ -613,8 +613,8 @@
         "activities": [
           {"id": "big-five", "name": "Big Five Safari", "price": 0},
           {"id": "elephant", "name": "Elephant Encounter (Amboseli)", "price": 0},
-          {"id": "photography", "name": "Wildlife Photography", "price": 2500},
-          {"id": "camping", "name": "Overnight Safari Camping", "price": 3000}
+          {"id": "photography", "name": "Wildlife Photography", "price": 18},
+          {"id": "camping", "name": "Overnight Safari Camping", "price": 21}
         ],
         "durations": [
           {"label": "1 day", "multiplier": 0.7},
@@ -705,8 +705,8 @@
       "shortDesc": "Seamless transport from Jomo Kenyatta International Airport to your Nairobi hotel with professional drivers",
       "fullDesc": "Start your Nairobi adventure stress-free! Professional drivers will meet you at Jomo Kenyatta International Airport with a personalized welcome sign. Enjoy comfortable air-conditioned vehicles, real-time tracking, and helpful arrival support. Perfect for first-time visitors and busy travelers.",
       "image": "files/Urban%20Pulse.png",
-      "basePrice": 3500,
-      "currency": "KES",
+      "basePrice": 231,
+      "currency": "USD",
       "duration": "1-2 hours",
       "groupSize": "1-4 people",
       "guides": [
@@ -773,8 +773,8 @@
       "customization": {
         "activities": [
           {"id": "basic", "name": "Basic Transfer (JKIA to Hotel)", "price": 0},
-          {"id": "city-tour", "name": "Quick City Orientation", "price": 1500},
-          {"id": "welcome-pack", "name": "Welcome Pack (SIM, tips, info)", "price": 800}
+          {"id": "city-tour", "name": "Quick City Orientation", "price": 11},
+          {"id": "welcome-pack", "name": "Welcome Pack (SIM, tips, info)", "price": 6}
         ],
         "durations": [
           {"label": "1 hour", "multiplier": 0.9},
